@@ -1,0 +1,136 @@
+:root {
+    --color-secundario: #66CED6;
+    --color-principal: #fff;
+}
+
+html {
+    font-size: 10px;
+}
+
+.home__head {
+    display: grid;
+    grid-template-columns: 17.5% 65% 17.5%;
+    /* Anchuras de las columnas */
+    grid-template-rows: 8rem;
+    grid-template-areas:
+        "location searcher user";
+    align-items: center;
+    background-color: var(--color-principal);
+    height: 8rem;
+    overflow: hidden;
+}
+
+.head__menu-icon {
+    position: absolute;
+    align-items: center;
+    color: var(--color-secundario);
+    margin: 1rem;
+}
+
+.menu-icon__icon {
+    font-size: 4rem;
+}
+
+.head__searcher {
+    grid-area: searcher;
+    margin: 1.5rem;
+    display: grid;
+    grid-template-columns: 90% 6rem;
+    grid-template-areas: "texts button";
+    padding: 0.5rem 0;
+    box-shadow: 0.2rem 0.2rem 0.5rem -0.3rem;
+    
+}
+
+.searcher__input,
+.searcher__button {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+.searcher__input {
+    font-size: 2rem;
+    padding: 1rem;
+    grid-area: texts;
+}
+
+.searcher__button {
+    font-size: 2.5rem;
+    padding: 1rem;
+    grid-area: button;
+}
+
+.head__location {
+    grid-area: location;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 6rem;
+    overflow: hidden;
+}
+
+.location__text {
+    white-space: nowrap;
+    font-size: 2rem;
+}
+
+@media (max-width: 1450px) {
+    .location__icon {
+        display: none;
+    }
+}
+
+@media (max-width: 1205px) {
+    .location__icon {
+        display: block;
+    }
+
+    .location__text {
+        display: none;
+    }
+}
+
+
+.location__icon {}
+
+.head__user {
+    grid-area: user;
+    display: flex;
+    align-items: center;
+    margin: 1.5rem;
+}
+
+.user__image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 6rem;
+    overflow: hidden;
+}
+
+.image-container__image {
+    max-width: 100%;
+}
+
+.user__name{
+    font-size: 1.5rem;
+    margin-left: 1rem;
+}
+
+.head__notifications {
+    position: absolute;
+    align-items: center;
+    color: var(--color-secundario);
+    margin: 1rem;
+    right: 0;
+}
+
+.notifications__icon {
+    font-size: 3.3rem;
+}
