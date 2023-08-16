@@ -6,7 +6,7 @@ function LoadingPage() {
   return (
     <div className="LoadingPage">
       <img className="LoadingPage__image" src={LogoCappy}/>
-      <button className="LoadingPage__button" onClick={() => window.location.href = "/Component/pagina1"}>Inicio</button>
+      <button className="LoadingPage__button" onClick={() => window.location.href = "/components/main"}>Inicio</button>
     </div>
   );
 }

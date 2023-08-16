@@ -1,8 +1,8 @@
 import React from 'react';
 import userimage from "./images/userphoto.png"
-import "./Pagina1.css"
+import "./Header.css"
 
-function Pagina2() {
+function Header() {
   return (
     <div className='home'>
       <header className='home__head'>
@@ -31,4 +31,4 @@ function Pagina2() {
   );
 }
 
-export default Pagina2;
+export default Header;

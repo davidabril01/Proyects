@@ -22,6 +22,7 @@ html {
     align-items: center;
     color: var(--color-secundario);
     margin: 1rem;
+    cursor: pointer;
 }
 
 .menu-icon__icon {
@@ -82,6 +83,10 @@ html {
     width: 100%;
 }
 
+.location__icon{
+    cursor: pointer;
+}
+
 .head__user {
     order: 2;
     display: flex;
@@ -126,19 +131,39 @@ html {
 }
 
 @media (max-width: 1125px) {
-    .head__location{
+    .location__icon{
         display: none;
+        padding: 0rem;
+        margin: 0rem;
     }
 
     .user__name {
         display: none;
     }
 
-    .head__menu-icon {
+    .location__text{
         display: block;
     }
 }
+
+@media (max-width: 1035px) {
+    .location__icon{
+        display: block;
+    }
+    .head__location{
+        
+        padding: 0rem;
+        margin: 0rem;
+    }
+    .location__text{
+        display: none;
+    }
+}
+
 @media (max-width: 552px) {
+    .head__menu-icon {
+        display: block;
+    }
     .head__notifications{
         display: none;
     }

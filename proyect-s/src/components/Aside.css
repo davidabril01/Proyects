@@ -1,0 +1,29 @@
+.menu{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu__nav{
+    width: 100%;
+    max-width: 115rem;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.option__icon{
+    display: none;
+}
+
+.nav__option{
+    margin: 0 1rem;
+    padding: 0;
+}
+
+.option__text{
+    font-size: 1.3rem;
+    font-weight: 500;
+    outline: none;
+}
