@@ -18,13 +18,13 @@ function Pagina2() {
           <i className='location__icon material-symbols-outlined'>expand_more</i>
         </div>
         <div className='head__user'>
+        <div className='head__notifications'>
+          <i className='notifications__icon material-symbols-outlined'>notifications</i>
+        </div>
           <div className='user__image-container'>
             <img className='image-container__image' src={userimage}></img>
           </div>
           <p className='user__name'>Leandro</p>
-        </div>
-        <div className='head__notifications'>
-          <i className='notifications__icon material-symbols-outlined'>notifications</i>
         </div>
       </header>
     </div>

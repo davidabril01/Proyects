@@ -10,25 +10,25 @@ body{
 
 .LoadingPage__image{
     max-width: 1100px;
-    margin-bottom: 20rem;
-    padding: 9rem 0;
+    align-self: center;
 }
 .LoadingPage{
-    height: 100%;
+    height: 100vh;
     width: 100%;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     background: #66CED6;
 }
 .LoadingPage__button{
     appearance: none;
     border: none;
-    position: absolute;
     background: #FFFF6A;
     font-size: 2.5rem;
-    padding: 0.5rem 1.5rem;
     border-radius: 0.5rem;
-    top: 70%;
+    width: 8.5rem;
+    height: 4rem;
     transition: cubic-bezier(0.075, 0.82, 0.165, 1) 300ms;
 }
 .LoadingPage__button:hover{
