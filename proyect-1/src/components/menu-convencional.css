@@ -1,0 +1,78 @@
+html{
+    font-size: 10px;
+}
+.menu{
+    width: 100%;
+    background-color: var(--color-subtitle);
+}
+.menu__barra{
+    width: 65%;
+    height: 4.5rem;
+    margin: auto;
+    
+}
+.menu__options{
+    color: var(--color-background);
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.menu__option{
+    font-size: 1.7rem;
+    margin: 1rem;
+}
+
+.menu__option:hover{
+    color: #cfcfcf;
+}
+.option__gatitos {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .tooltiptext {
+    visibility: hidden;
+    width: 130px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    margin: 0;
+    padding: 0.7rem;
+    position: absolute;
+    z-index: 1;
+    top: 4rem;
+    left: -2rem;
+    opacity: 0;
+    transition: opacity 0.3s, visibility 0.3s;
+  }
+
+  .tooltiptext ul{
+    padding-left: 0rem;
+  }
+
+  .tooltiptext ul li{
+    padding: 0.7rem;
+  }
+  
+  .tooltiptext ul li:hover{
+    color: #cfcfcf;
+  }
+  
+  .tooltiptext::before {
+  content: "";
+  position: absolute;
+  top: -8%; /* Coloca el triángulo justo debajo del tooltip */
+  left: 24%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: transparent transparent #333 transparent; /* Triángulo apuntando hacia arriba */
+}
+
+  .option__gatitos:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+  

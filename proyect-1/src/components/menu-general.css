@@ -1,0 +1,40 @@
+html{
+    font-size: 10px;
+}
+.menu1{
+    width: 100%;
+    background-color: #C6CAE9;
+}
+.menu1__barra{
+    width: 65%;
+    height: 16.5rem;
+    margin: auto;
+    
+}
+.menu1__options{
+    color: var(--color-background);
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.menu1__option{
+    border: none;
+    background-color: var(--color-background);
+    height: 13.5rem;
+    width: 13.5rem;
+    border-radius: 13.5rem;
+    font-size: 1.7rem;
+    margin: 1rem;
+    overflow: hidden;
+    transition: all 250ms ease-in-out;
+}
+
+.menu1__option:hover{
+    box-shadow: 0 0 1rem var(--color-subtitle);
+}
+
+.menu1__option img{
+    margin: auto;
+    max-width: 80%;
+    max-height: 80%;
+}
