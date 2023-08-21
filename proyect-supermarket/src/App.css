@@ -1,0 +1,12 @@
+:root {
+    --border-color: rgba(26, 26, 26, 0.364);
+    --background-light-color: #f0f0f0;
+    --text-color: #000000;
+    --color-secundary: #80AC39;
+    --color-principal: #ffffff;
+}
+
+html {
+    font-size: 10px;
+}
+

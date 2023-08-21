@@ -1,0 +1,72 @@
+.App__top {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: var(--background-light-color);
+}
+
+.top__content {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    width: 115rem;
+}
+
+.top__mail-holder {
+    font-size: 1.4rem;
+    flex-grow: 0.5;
+    display: flex;
+    align-items: center;
+    border-right: solid 1px var(--border-color);
+    padding-right: 0.5rem;
+}
+
+.mail-holder__icon {
+    margin-right: 0.5rem;
+}
+
+.top__center {
+    flex-grow: 8;
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 2rem;
+    padding-right: 0.5rem;
+    border-right: solid 1px var(--border-color);
+}
+
+.social-media__icon {
+    margin: 0 1rem;
+    cursor: pointer;
+}
+
+.top__language {
+    flex-grow: 0.8;
+    padding-left: 1rem;
+    font-size: 1.4rem;
+    display: flex;
+    padding-right: 1rem;
+    justify-content: space-around;
+    align-items: center;
+    border-right: solid 1px var(--border-color);
+    cursor: pointer;
+}
+
+.language__icon2 {
+    font-size: 1.2rem;
+}
+
+.language__icon1 {
+    width: 25px;
+}
+
+.top__login {
+    flex-grow: 0.3;
+    font-size: 1.4rem;
+    padding-left: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}

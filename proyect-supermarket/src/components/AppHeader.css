@@ -1,0 +1,48 @@
+.header__container{
+    display: flex;
+    justify-content: space-between;
+    width: 115rem;
+    padding: 0;
+    height: 7.7rem;
+}
+.header__menu{
+    font-size: 1.4rem;
+    display: flex;
+    width: 45.5rem;
+    justify-content: space-between;
+    align-self: center;
+}
+
+.menu__link{
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+}
+
+.menu__link:hover{
+    color: var(--color-secundary);
+    cursor: pointer;
+}
+
+.header__cart{
+    font-size: 1.4rem;
+    display: flex;
+    width: 19rem;
+    justify-content:space-around;
+    align-self: center;
+}
+.cart__heart, .cart__bag{
+    font-size: 2rem;
+}
+
+.cart__heart:hover, .cart__bag:hover{
+    cursor: pointer;
+    color: var(--color-secundary);
+}
+
+.cart__total:hover{
+    cursor: pointer;
+}
+.total__bold{
+    font-weight: 700;
+}
