@@ -9,7 +9,7 @@
     display: flex;
     justify-content: space-between;
     padding: 1rem;
-    width: 115rem;
+    width: var(--page-widht);
 }
 
 .top__mail-holder {
@@ -69,4 +69,16 @@
     align-items: center;
     justify-content: space-between;
     cursor: pointer;
+}
+
+@media (max-width: 714px) {
+    .top__mail-holder {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .top__offer{
+        display: none;
+    }
 }
