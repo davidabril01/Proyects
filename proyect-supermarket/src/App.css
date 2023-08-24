@@ -4,9 +4,10 @@
     --text-color: #000000;
     --color-secundary: #80AC39;
     --color-principal: #ffffff;
+    --page-widht: 115rem;
 }
 
 html {
-    font-size: 10px;
+    font-size: 10.5px;
 }
 

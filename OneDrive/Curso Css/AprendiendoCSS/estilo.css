@@ -1,0 +1,30 @@
+.titulo-1 {
+    color: rgb(62, 27, 200);
+}
+.cuerpo-1 {
+    color:rgb(0, 0, 0);
+    font-size: 14px;
+    font-family: sans-serif;
+    background-color: rgb(214, 204, 255);
+    border: medium solid rgb(62, 27, 200);
+    border-radius: 0px 10px 0px 0px;
+    width: 500px;
+    margin: 0 auto;
+    align-items: flex-end;
+}
+.cuerpo-2 {
+    color:rgb(0, 0, 0);
+    font-size: 14px;
+    font-family: sans-serif;
+    background-color: rgb(214, 204, 255);
+    border: medium solid rgb(62, 27, 200);
+    border-top: none;
+    border-radius: 0px 0px 0px 10px;
+    margin: 0 auto;
+    align-items: flex-end;
+    width: 500px;
+}
+.contenedor {
+    display: flex;
+    flex-direction: column;
+}

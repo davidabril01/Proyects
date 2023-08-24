@@ -1,9 +1,13 @@
 .header__container{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
     display: flex;
     justify-content: space-between;
-    width: 115rem;
+    width: var(--page-widht);
     padding: 0;
     height: 7.7rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
 }
 .header__menu{
     font-size: 1.4rem;
@@ -45,4 +49,20 @@
 }
 .total__bold{
     font-weight: 700;
+}
+
+@media (max-width: 992px) {
+    .header__logo {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .header__cart{
+        display: none;
+    }
+    .header__menu{
+        width: 100%;
+        justify-self: center;
+    }
 }

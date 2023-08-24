@@ -1,0 +1,15 @@
+:root{
+    --mi-variable: green;
+    --fuente: Verdana;
+    --fuente-size: 45px;
+}
+
+h1{
+    color: var(--mi-variable);
+    font-family: var(--fuente);
+    font-size: var(--fuente-size);
+}
+
+a{
+    color: var(--mi-variable);
+}

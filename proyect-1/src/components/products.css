@@ -1,0 +1,12 @@
+.Products{
+    display: grid;
+    grid-template-areas: "obj1 obj2 obj3" "obj4 obj5 obj6" "obj7 obj8 obj9";
+    margin: 7rem;
+}
+.Products__object{
+    width: 30rem;
+    height: 40rem;
+    background-color: #ffffff;
+    box-shadow: 0 0 1rem var(--color-text);
+    margin: 4rem auto;
+}
