@@ -2,26 +2,52 @@ import { Container } from "react-bootstrap";
 import "./header.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
+import mascota1 from "./images/tamanna-rumee-FtJEat_S7Q4-unsplash1.jpg"
+import mascota2 from "./images/felipe-correia-Z3r7p3DqXeM-unsplash1.jpg"
+import mascota3 from "./images/jason-leung-hsS6jTr-pns-unsplash1.jpg"
 
+import React, { useState } from 'react';
 
 function Header() {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const handleMouseEnter = () => {
+        setIsMenuOpen(true);
+    };
+
+    const handleMouseLeave = () => {
+        setIsMenuOpen(false);
+    };
+
+   
+
     return (
+
         <div className="Header">
             <Container className="Header__content">
+                <div className="content__else">
+                </div>
                 <div className="content__user">
                     <span className="user__name">John</span>
                     <div className="user__icon-holder">
                         <FontAwesomeIcon className="icon-holder__icon" icon={faUser} />
-                        <span className="icon-holder__tooltiptext">
-                            <ul className="tooltiptext__options">
-                                <li className="options__option"><a className="option__link" href="#">Opción 1</a></li>
-                                <li className="options__option"><a className="option__link" href="#">Opción 2</a></li>
-                                <li className="options__option"><a className="option__link" href="#">Opción 3</a></li>
-                            </ul>
-                    </span>
+                        <div className="icon-holder__tooltiptext">
+                            <div className="tooltiptext__options">
+                                <div className="options__option"><a className="option__link" onMouseEnter={handleMouseEnter}>Mis mascotas</a></div>
+                                <div className={`options__mascotas-container ${isMenuOpen ? 'open' : ''}`}>
+                                    <div className="options__mascotas" onMouseLeave={handleMouseLeave}><img className="mascotas__1" src={mascota1}></img><img className="mascotas__2" src={mascota2}></img><img className="mascotas__3" src={mascota3}></img></div>
+                                </div>
+                                <div className="options__option"><a className="option__link" href="#">Mi perfil</a></div>
+                                <div className="options__option"><a className="option__link" href="#">Carrito</a></div>
+                                <div className="options__option"><a className="option__link" href="#">.</a></div>
+                                <div className="options__option"><a className="option__link" href="#">.</a></div>
+                                <div className="options__option"><a className="option__link" href="#">.</a></div>
+                                <div className="options__option"><a className="option__link" href="#">Cerrar sesión</a></div>
+                            </div>
+                        </div>
                     </div>
-                    
                 </div>
+
             </Container>
         </div>
     );

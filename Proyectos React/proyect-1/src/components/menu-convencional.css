@@ -6,16 +6,17 @@ html{
     background-color: var(--color-subtitle);
 }
 .menu__barra{
-    width: 65%;
     height: 4.5rem;
     margin: auto;
     
 }
 .menu__options{
     color: var(--color-background);
+    width: 100%;
     display:flex;
     flex-direction: row;
     justify-content: space-between;
+    padding: 0;
 }
 .menu__option{
     font-size: 1.7rem;

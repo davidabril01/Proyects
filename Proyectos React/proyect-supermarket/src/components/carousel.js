@@ -6,13 +6,14 @@ import imagen3 from './carrousel3.png'
 import imagen4 from './carrousel4.png'
 import Slider from 'react-slick';
 import './carousel.css';
+import { Container } from "react-bootstrap";
 
 function Carrusel() {
   var settings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 4,
+    slidesToShow: 3,
     slidesToScroll: 2,
     initialSlide: 0,
     responsive: [
@@ -20,7 +21,7 @@ function Carrusel() {
         breakpoint: 1024,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToScroll: 2,
           infinite: true,
           dots: true
         }
@@ -43,7 +44,7 @@ function Carrusel() {
     ]
   };
   return (
-    <div className='carousel'>
+    <Container className='carousel'>
       <Slider {...settings}>
         <div className="imagenes-c"><img className='imagenes' src={imagen1} /><span className="c-names">VEGETABLES</span></div>
         <div className="imagenes-c"><img className='imagenes' src={imagen2} /><span className="c-names">DRINK FRUITS</span></div>
@@ -54,7 +55,7 @@ function Carrusel() {
         <div className="imagenes-c"><img className='imagenes' src={imagen3} /><span className="c-names">FRESH MEAT</span></div>
         <div className="imagenes-c"><img className='imagenes' src={imagen4} /><span className="c-names">FRESH FRUIT</span></div>
       </Slider>
-    </div>
+    </Container>
   );
 }
 export default Carrusel;

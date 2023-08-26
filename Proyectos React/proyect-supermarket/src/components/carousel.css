@@ -1,11 +1,13 @@
 .carousel{
     background-color: #ffffff;
     color: #fff;
-    width: 100%;
+    width: 96%;
     justify-self: center;
     margin-left: 1rem;
     margin-top: 5rem;
   }
+
+  
 
   .slick-list{
   }
@@ -24,7 +26,13 @@
   }
 
   .imagenes{
-    width: 58%;
+    width: 43%;
+  }
+
+  @media (max-width: 992px){
+    .imagenes{
+      width: 70%;
+    }
   }
 
   .c-names{

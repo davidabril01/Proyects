@@ -65,4 +65,7 @@
         width: 100%;
         justify-self: center;
     }
+    .header__container{
+        width: 100%;
+    }
 }

@@ -1,8 +1,10 @@
 import "./header.css"
+import { Container } from "react-bootstrap";
+
 function Header() {
     return (
         <header className="head">
-            <section className="head-section">
+            <Container className="head-section">
                 <div className="head-section__domain">
                     <h1 className="domain__name">Llogivet</h1>
                     <small className="domain__extension">.com</small>
@@ -23,7 +25,7 @@ function Header() {
                     <i className="icons__wish-icon material-symbols-outlined">favorite</i>
                     <i className="icons__cart-icon material-symbols-outlined">shopping_cart</i>
                 </div>
-            </section>
+            </Container>
         </header>
     );
 }

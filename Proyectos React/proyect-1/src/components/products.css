@@ -1,12 +1,22 @@
-.Products{
+.Layout{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+.Layout__Products{
     display: grid;
-    grid-template-areas: "obj1 obj2 obj3" "obj4 obj5 obj6" "obj7 obj8 obj9";
-    margin: 7rem;
+    gap: 16px;
+    grid-auto-rows: 0fr;
+    grid-template-columns: repeat(auto-fit,minmax(284px,284px));
+    justify-content: start;
+    width: 90rem;
+    margin: 1rem;
 }
 .Products__object{
-    width: 30rem;
-    height: 40rem;
-    background-color: #ffffff;
-    box-shadow: 0 0 1rem var(--color-text);
-    margin: 4rem auto;
+    border: 1px solid #f5f5f5;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+    width: 270px;
+    height: 300px;
 }

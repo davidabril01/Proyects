@@ -12,15 +12,15 @@ function Carrusel() {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 2,
     slidesToScroll: 2,
     initialSlide: 0,
     responsive: [
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToShow: 2,
+          slidesToScroll: 2,
           infinite: true,
           dots: true
         }
@@ -43,13 +43,15 @@ function Carrusel() {
     ]
   };
   return (
-    <div className='carousel'>
-      <Slider {...settings}>
-        <img className='imagenes' src={imagen1} />
-        <img className='imagenes' src={imagen2} />
-        <img className='imagenes' src={imagen3} />
-        <img className='imagenes' src={imagen4} />
-      </Slider>
+    <div className="carousel__holder">
+      <div className='carousel'>
+        <Slider {...settings}>
+          <img className='imagenes' src={imagen1} />
+          <img className='imagenes' src={imagen2} />
+          <img className='imagenes' src={imagen3} />
+          <img className='imagenes' src={imagen4} />
+        </Slider>
+      </div>
     </div>
   );
 }

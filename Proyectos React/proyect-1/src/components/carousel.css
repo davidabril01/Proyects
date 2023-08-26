@@ -1,8 +1,14 @@
+.carousel__holder{
+  padding: 5rem;
+  background-color: #ffffff;
+  color: #fff;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .carousel{
-    padding: 5rem;
-    background-color: #ffffff;
-    color: #fff;
-    width: 100%;
+    width: 74%;
   }
 
   .slick-slide div{

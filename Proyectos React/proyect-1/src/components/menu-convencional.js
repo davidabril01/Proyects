@@ -1,7 +1,10 @@
 import "./menu-convencional.css"
+import { Container } from "react-bootstrap";
+
 function MenuConvencional() {
     return (
         <div className="menu">
+            <Container>
             <nav className="menu__barra">
                 <ul className="menu__options">
                     <li className="menu__option"><a href="#">Categorias</a></li>
@@ -21,6 +24,7 @@ function MenuConvencional() {
                     </li>
                 </ul>
             </nav>
+            </Container>
         </div>
     );
 }
