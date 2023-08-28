@@ -81,4 +81,10 @@
     .top__offer{
         display: none;
     }
+    .top__center{
+        padding-left: 0.5rem;
+    }
+    .top__login{
+        padding-right: 1.5rem;
+    }
 }

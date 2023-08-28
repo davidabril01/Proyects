@@ -1,57 +1,14 @@
 .carousel{
-    background-color: #ffffff;
-    color: #fff;
-    width: 96%;
-    justify-self: center;
-    margin-left: 1rem;
-    margin-top: 5rem;
-  }
-
+  margin-top: 5rem;
   
-
-  .slick-list{
-  }
-
-  .slick-slide{
-    padding: 1rem;
-  }
-
-  .imagenes-c{
-    height: 25rem !important;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: center !important;
-    align-items: center !important;
-    background-color: var(--background-light-color);
-  }
-
-  .imagenes{
-    width: 43%;
-  }
-
-  @media (max-width: 992px){
-    .imagenes{
-      width: 70%;
-    }
-  }
-
-  .c-names{
-    position: absolute;
-    bottom: 5%;
-    font-size: 2rem;
-    color: #585858;
-    font-weight: 600;
-  }
+}
+.slick-slide, .slick-current{
   
-  .slick-next:before, .slick-prev:before {
-    color: #000 !important;
-  }
-  .slick-dots li.slick-active button:before{
-    color: rgb(0, 0, 0) !important;
-  }
-  .slick-dots li button::before{
-    color: #3e3e3e !important;
-    font-size: 1rem !important;
-    top: 2rem !important;
-  }
- 
+  padding: 1rem;
+}
+.imagenes{
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.292);
+  padding: 1rem;
+  border-radius: 5px;
+  border-top: solid 1px rgba(0, 0, 0, 0.039);
+}

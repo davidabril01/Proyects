@@ -8,6 +8,15 @@
 }
 
 html {
-    font-size: 10.5px;
+    font-size:9.5px;
 }
 
+@media (min-width: 500px) {
+    html {
+        font-size: 10.5px;
+    }
+}
+
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    --bs-gutter-x: 0;
+}

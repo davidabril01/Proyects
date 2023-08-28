@@ -55,6 +55,10 @@
     .header__logo {
         display: none;
     }
+    .header__menu{
+        width: 100%;
+        justify-content: space-around;
+    }
 }
 
 @media (max-width: 600px) {

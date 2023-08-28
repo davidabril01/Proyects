@@ -2,7 +2,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { } from "@fortawesome/free-brands-svg-icons"
 import { faBagShopping, faHeart } from "@fortawesome/free-solid-svg-icons";
-import LogoSvg from "./image (2).svg";
+import LogoSvg from "./images/image (2).svg";
 import { Container } from "react-bootstrap"
 import "./AppHeader.css"
 
