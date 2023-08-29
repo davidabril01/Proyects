@@ -1,9 +1,9 @@
 .App__content {
-  max-width: var(--page-widht);
+  max-width: var(--page-width);
 }
 
 .content {
-  max-width: var(--page-widht);
+  max-width: var(--page-width);
   display: grid;
   grid-template-columns: 25% 75%;
   grid-template-areas: "aside principal";
@@ -280,3 +280,4 @@
     width: 70%;
   }
 }
+

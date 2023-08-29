@@ -4,7 +4,7 @@
     --text-color: #000000;
     --color-secundary: #80AC39;
     --color-principal: #ffffff;
-    --page-widht: 115rem;
+    --page-width: 115rem;
 }
 
 html {
@@ -17,6 +17,3 @@ html {
     }
 }
 
-.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
-    --bs-gutter-x: 0;
-}

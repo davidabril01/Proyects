@@ -7,6 +7,7 @@ import { CSSTransition } from 'react-transition-group';
 import VegPhoto from "./images/imageedit_1_7563330645.png";
 import Carrusel from "./carousel";
 import Content__aside from "./content/ContentAside";
+import Content__products from "./content/ContentProducts";
 
 function App__content() {
     
@@ -48,6 +49,7 @@ function App__content() {
                 </div>
             </Container>
             <Carrusel className="content__carrousel" />
+            <Content__products className="content__products"/>
         </Container>
     );
 }
