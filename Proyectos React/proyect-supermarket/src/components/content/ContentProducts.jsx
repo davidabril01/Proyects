@@ -1,5 +1,6 @@
 import { Container } from "react-bootstrap";
 import "./ContentProducts.css";
+import img1 from "../images/image (2).svg"
 
 function Content__products(){
     return(
@@ -15,56 +16,56 @@ function Content__products(){
             <div className="products__container">
                 <div className="container__product">
                     <div className="producto__image-container">
-                        <img className="image-container__image"></img>
+                        <img className="image-container__image" src={img1}></img>
                     </div>
                     <div className="product__name">Grab Pool Security</div>
                     <div className="product__price">$30.00</div>
                 </div>
                 <div className="container__product">
                     <div className="producto__image-container">
-                        <img className="image-container__image"></img>
+                        <img className="image-container__image" src={img1}></img>
                     </div>
                     <div className="product__name">Grab Pool Security</div>
                     <div className="product__price">$30.00</div>
                 </div>
                 <div className="container__product">
                     <div className="producto__image-container">
-                        <img className="image-container__image"></img>
+                        <img className="image-container__image" src={img1}></img>
                     </div>
                     <div className="product__name">Grab Pool Security</div>
                     <div className="product__price">$30.00</div>
                 </div>
                 <div className="container__product">
                     <div className="producto__image-container">
-                        <img className="image-container__image"></img>
+                        <img className="image-container__image" src={img1}></img>
                     </div>
                     <div className="product__name">Grab Pool Security</div>
                     <div className="product__price">$30.00</div>
                 </div>
                 <div className="container__product">
                     <div className="producto__image-container">
-                        <img className="image-container__image"></img>
+                        <img className="image-container__image" src={img1}></img>
                     </div>
                     <div className="product__name">Grab Pool Security</div>
                     <div className="product__price">$30.00</div>
                 </div>
                 <div className="container__product">
                     <div className="producto__image-container">
-                        <img className="image-container__image"></img>
+                        <img className="image-container__image" src={img1}></img>
                     </div>
                     <div className="product__name">Grab Pool Security</div>
                     <div className="product__price">$30.00</div>
                 </div>
                 <div className="container__product">
                     <div className="producto__image-container">
-                        <img className="image-container__image"></img>
+                        <img className="image-container__image" src={img1}></img>
                     </div>
                     <div className="product__name">Grab Pool Security</div>
                     <div className="product__price">$30.00</div>
                 </div>
                 <div className="container__product">
                     <div className="producto__image-container">
-                        <img className="image-container__image"></img>
+                        <img className="image-container__image" src={img1}></img>
                     </div>
                     <div className="product__name">Grab Pool Security</div>
                     <div className="product__price">$30.00</div>
