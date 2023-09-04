@@ -1,0 +1,61 @@
+body {
+    font-family: sans-serif;
+    background-color: #fff;
+  }
+  
+  header {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 2em;
+  }
+  
+  nav {
+    float: right;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  a:hover {
+    color: #00f;
+  }
+  
+  section {
+    padding: 20px;
+  }
+  
+  .about {
+    background-color: #f0f0f0;
+  }
+  
+  .projects {
+    background-color: #eee;
+  }
+  
+  .contact {
+    background-color: #ccc;
+  }
+  
+  ul {
+    list-style-type: none;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  a img {
+    max-width: 100%;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 20px;
+  }
+  

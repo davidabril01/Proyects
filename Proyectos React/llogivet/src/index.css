@@ -1,6 +1,10 @@
 :root{
   --color-principal:#aab2ff;
   --color-gris:#F0F0F0;
+  --color-white:#ffffff;
+  --color-gris-claro: #F6F7FB;
+  --text-color: #0F0F14;
+  --color-gris-oscuro: #E4E5E9;
 }
 
 html{

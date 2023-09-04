@@ -1,100 +1,88 @@
 #include <iostream>
-#include <cmath>
+#include <vector>
 
 using namespace std;
 
-const int MAX_CITIES = 10;
-
-// Estructura para representar una ciudad
-struct City {
-    int x, y;
+// Estructura de datos para representar un grafo
+struct Grafo {
+  int V; // Número de vértices
+  vector<vector<int>> aristas; // Matriz de adyacencia
+  vector<int> grados; // Vector de grados de los vértices
 };
 
-// Función para calcular la distancia entre dos ciudades
-double distance(const City& a, const City& b) {
-    int dx = a.x - b.x;
-    int dy = a.y - b.y;
-    return sqrt(dx * dx + dy * dy);
+bool contains(vector<int>& v, int x) {
+  for (int i = 0; i < v.size(); i++) {
+    if (v[i] == x) {
+      return true;
+    }
+  }
+
+  return false;
 }
 
-// Función para calcular la longitud de un recorrido dado
-double tourLength(int tour[], const City cities[], int n) {
-    double length = 0.0;
-    for (int i = 0; i < n - 1; ++i) {
-        length += distance(cities[tour[i]], cities[tour[i + 1]]);
-    }
-    length += distance(cities[tour[n - 1]], cities[tour[0]]); // Regreso a la ciudad de inicio
-    return length;
-}
+// Estructura de datos para representar un ciclo hamiltoniano
+struct CicloHamiltoniano {
+  vector<int> vertices; // Vértices del ciclo
+  int peso; // Peso del ciclo
+};
 
-// Función para generar la siguiente permutación de un arreglo
-bool nextPermutation(int tour[], int n) {
-    int i = n - 2;
-    while (i >= 0 && tour[i] >= tour[i + 1]) {
-        i--;
-    }
-    if (i < 0) {
-        return false; // No hay más permutaciones
-    }
+// Función para calcular el ciclo hamiltoniano con menos peso
+CicloHamiltoniano encontrarCicloHamiltonianoMinimo(Grafo grafo) {
+  // Variables locales
+  CicloHamiltoniano cicloMinino;
+  int pesoMinino = INT_MAX;
 
-    int j = n - 1;
-    while (tour[j] <= tour[i]) {
-        j--;
-    }
+  // Iteramos sobre todos los vértices del grafo
+  for (int v = 0; v < grafo.V; v++) {
+    // Inicializamos el ciclo con el vértice v
+    cicloMinino.vertices.push_back(v);
 
-    swap(tour[i], tour[j]);
+    // Recorremos los vértices adyacentes a v
+    for (int u : grafo.aristas[v]) {
+      // Si el vértice u no está en el ciclo, lo añadimos
+      if (!contains(cicloMinino.vertices, u)) {
+        cicloMinino.vertices.push_back(u);
 
-    int left = i + 1;
-    int right = n - 1;
-    while (left < right) {
-        swap(tour[left], tour[right]);
-        left++;
-        right--;
-    }
-
-    return true;
-}
-
-int main() {
-    int n; // Número de ciudades
-    cout << "Ingrese el número de ciudades: ";
-    cin >> n;
-
-    if (n > MAX_CITIES) {
-        cout << "Número de ciudades demasiado grande. El límite es " << MAX_CITIES << endl;
-        return 1;
-    }
-
-    City cities[MAX_CITIES];
-    cout << "Ingrese las coordenadas de las ciudades (x y):" << endl;
-    for (int i = 0; i < n; ++i) {
-        cin >> cities[i].x >> cities[i].y;
-    }
-
-    int tour[MAX_CITIES];
-    for (int i = 0; i < n; ++i) {
-        tour[i] = i;
-    }
-
-    double shortestLength = HUGE_VAL;
-    int shortestTour[MAX_CITIES];
-
-    do {
-        double length = tourLength(tour, cities, n);
-        if (length < shortestLength) {
-            shortestLength = length;
-            for (int i = 0; i < n; ++i) {
-                shortestTour[i] = tour[i];
-            }
+        // Actualizamos el peso del ciclo
+        int pesoActual = 0;
+        for (int i = 0; i < cicloMinino.vertices.size() - 1; i++) {
+          pesoActual += grafo.aristas[cicloMinino.vertices[i]][cicloMinino.vertices[i + 1]];
         }
-    } while (nextPermutation(tour, n));
 
-    cout << "El camino más corto es: ";
-    for (int i = 0; i < n; ++i) {
-        cout << shortestTour[i] << " ";
+        if (pesoActual < pesoMinino) {
+          pesoMinino = pesoActual;
+          cicloMinino.peso = pesoMinino;
+        }
+
+        // Eliminamos el vértice u del ciclo
+        cicloMinino.vertices.pop_back();
+      }
     }
-    cout << endl;
-    cout << "Longitud del camino más corto: " << shortestLength << endl;
 
-    return 0;
+    // Eliminamos el vértice v del ciclo
+    cicloMinino.vertices.pop_back();
+  }
+
+  return cicloMinino;
+}
+
+// Función para comprobar si un elemento está presente en un vector
+
+
+// Función principal
+int main() {
+  // Declaramos un grafo con 5 vértices
+  Grafo grafo = {5, {{0, 1, 10}, {0, 2, 5}, {1, 2, 15}, {1, 3, 20}, {2, 3, 12}}, {0, 1, 2, 3}};
+
+  // Encontramos el ciclo hamiltoniano con menos peso
+  CicloHamiltoniano cicloMinino = encontrarCicloHamiltonianoMinimo(grafo);
+
+  // Imprimimos el ciclo hamiltoniano
+  cout << "El ciclo hamiltoniano con menos peso es: ";
+  for (int v : cicloMinino.vertices) {
+    cout << v << " ";
+  }
+  cout << endl;
+
+  return 0;
 }
