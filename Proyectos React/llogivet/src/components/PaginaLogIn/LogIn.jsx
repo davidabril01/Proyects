@@ -1,16 +1,16 @@
 import "./LogIn.css"
-import Layout from "./LogIn/Layout";
+import Login_layout from "./Login_layout";
 import background from "../images/paloma.png"
 
 function LogIn() {
     return (
         <div>
             <div className="background">
-                <img className="background-image" src={background}>
+                <h1 className="background__title">Llogivet</h1>
+                <img className="background__image" src={background}>
                 </img>
-
             </div>
-            <Layout />
+            <Login_layout />
         </div>
     );
 }

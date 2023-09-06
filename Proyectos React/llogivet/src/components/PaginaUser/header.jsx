@@ -1,12 +1,12 @@
-import { Container } from "react-bootstrap";
+
 import "./header.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import mascota1 from "../images/tamanna-rumee-FtJEat_S7Q4-unsplash.jpg"
 import mascota2 from "../images/felipe-correia-Z3r7p3DqXeM-unsplash.jpg"
 import mascota3 from "../images/jason-leung-hsS6jTr-pns-unsplash.jpg"
-
 import React, { useState } from 'react';
+import { Container } from "react-bootstrap";
 
 function HeaderUser() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
