@@ -1,6 +1,6 @@
 import "./Login_layout.css"
 
-function Login_layout() {
+function Login_layout({ toggleLayout }) {
     return (
         <div className="Login_layout">
             <div className="layout__box">
@@ -28,7 +28,7 @@ function Login_layout() {
                         <button className="content__google-button">Log in with Google</button>
                         <button className="content__facebook-button">Log in with Facebook</button>
                     </div>
-                    <div className="content__sign-up">Don't Have An Account? <a className="sign-up__link" href="/SignIn">Sign Up</a></div>
+                    <div className="content__sign-up">Don't Have An Account? <a className="sign-up__link" href="#" onClick={toggleLayout}>Sign Up</a></div>
                 </main>
             </div>
         </div>

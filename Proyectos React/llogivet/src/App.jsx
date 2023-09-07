@@ -4,8 +4,8 @@ import { Container } from "react-bootstrap";
 import "./App.css";
 import HeaderNoUser from "./components/PaginaNoUser/header";
 import HeaderUser from "./components/PaginaUser/header";
-import LogIn from './components/PaginaLogIn/LogIn';
-import SignIn from './components/PaginaLogIn/SingIn';
+import UserIn from './components/PaginaLogIn/UserIn';
+import SingIn_layout from './components/PaginaLogIn/SignIn_layout';
 
 class App extends Component {  
   render() {  
@@ -17,8 +17,8 @@ class App extends Component {
       <div>
         <Routes>
         <Route exact path='/' element={< HeaderNoUser />}></Route>
-        <Route exact path='/LogIn' element={< LogIn />}></Route> 
-        <Route exact path='/SignIn' element={< SignIn />}></Route>
+        <Route exact path='/UserIn' element={< UserIn />}></Route> 
+        <Route exact path='/SingIn_layout' element={< SingIn_layout />}></Route>
         </Routes>
       </div>
     </Router>

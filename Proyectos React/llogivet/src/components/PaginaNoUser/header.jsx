@@ -38,7 +38,7 @@ function HeaderNoUser() {
                                 <div className="options__option"><a className="option__link" href="#">.</a></div>
                                 <div className="options__option"><a className="option__link" href="#">.</a></div>
                                 <div className="options__option"><a className="option__link" href="#">.</a></div>
-                                <div className="options__option"><a className="option__link" href="/LogIn">Iniciar sesión</a></div>
+                                <div className="options__option"><a className="option__link" href="/UserIn">Iniciar sesión</a></div>
                             </div>
                         </div>
                     </div>
