@@ -1,0 +1,16 @@
+/* reset.css */
+
+/* Quitemos márgenes, rellenos y bordes predeterminados */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+  
+  /* Asegurémonos de que el tamaño del cuerpo sea del 100% de la ventana gráfica */
+  body {
+    width: 100%;
+    height: 100vh;
+    font-family: Arial, sans-serif; /* Puedes cambiar la fuente según tus preferencias */
+  }
+  
