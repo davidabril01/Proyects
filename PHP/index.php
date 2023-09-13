@@ -76,5 +76,4 @@ if(isset($_POST['clear'])){
         </div>
     </form>
 </body>
-
 </html>

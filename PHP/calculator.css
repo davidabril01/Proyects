@@ -1,37 +1,47 @@
-body{
+body {
     display: flex;
     justify-content: center;
     align-content: center;
     align-items: center;
     height: 100vh;
+    background-image: -webkit-linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+    background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
 }
-.calculator{
+
+.calculator {
     width: 500px;
     display: flex;
     flex-direction: column;
     height: 700px;
-
 }
 
-.calculator__screen{
+.calculator__screen {
     flex-grow: 1;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: lightsteelblue;
+    background: #fafafa10;
+    border-top: 1px solid #fafafa10;
+    border-left: 1px solid #fafafa10;
+    border-right: 1px solid #fafafa10;
     border-radius: 5px 5px 0 0;
 }
-.calculator__numbers{
+
+.calculator__numbers {
     flex-grow: 7;
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
     grid-template-rows: 25% 25% 25% 25%;
     grid-template-areas: "7 8 9 +" "4 5 6 -" "1 2 3 *" "C 0 . =";
-    background-color: lightsteelblue;
+    background: #fafafa10;
+    border-top: 1px solid #fafafa10;
+    border-left: 1px solid #fafafa10;
+    border-right: 1px solid #fafafa10;
     border-radius: 0 0 5px 5px;
+    overflow: hidden;
 }
 
-.screen__text{
+.screen__text {
     height: 85px;
     width: 85%;
     border-radius: 20px;
@@ -39,27 +49,30 @@ body{
     padding-left: 20px;
 }
 
-.numbers__btn{
+.numbers__btn {
     all: unset;
-    background-color: #ffffff75;
+    background: #fafafa10;
     text-align: center;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 30px;
     color: rgba(2, 2, 2, 0.521);
     cursor: pointer;
 }
-.numbers__btn:hover{
-    background-color: #ffffffa6;
+
+.numbers__btn:hover {
+    background: #fafafa67;
 }
-.numbers__btn-cal{
+
+.numbers__btn-cal {
     all: unset;
-    background-color: #ffffff75;
+    background: #fafafa10;
     text-align: center;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 30px;
     color: rgba(2, 2, 2, 0.521);
     cursor: pointer;
 }
-.numbers__btn-cal:hover{
-    background-color: #ffffffa6;
+
+.numbers__btn-cal:hover {
+    background: #fafafa67;
 }
