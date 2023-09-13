@@ -18,10 +18,10 @@ function UserIn() {
                 </img>
             </div>
             {showLoginLayout ? (
-                <Login_layout toggleLayout={toggleLayout} />
-            ) : (
-                <SignIn_layout />
-            )}
+        <Login_layout toggleLayout={toggleLayout} />
+      ) : (
+        <SignIn_layout toggleLayout={toggleLayout} />
+      )}
         </div>
     );
 }

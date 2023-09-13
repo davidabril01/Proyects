@@ -4,8 +4,10 @@ function SignIn_layout({ toggleLayout }) {
         <div className="SignIn_layout">
             <div className="Slayout__box">
                 <main className="Slayout__content">
-                    <h2 className="Scontent__title">Sign<span className="title__color">In</span></h2>
-                    <div className="Scontent__sign-in">Already Have An Account? <a className="sign-up__link" href="#" onClick={toggleLayout}>Sign Up</a></div>
+                    <div className="Scontent__sign-in">
+                        <h2 className="Scontent__title">Sign<span className="title__color">In</span></h2>
+                        Already Have An Account? <a className="sign-up__link" href="#" onClick={toggleLayout}>Sign In</a>
+                    </div>
                     <div className="Scontent__principal">
                         <div className="Scontent__user-info">
                             <div className="Suser-info__first-name">
