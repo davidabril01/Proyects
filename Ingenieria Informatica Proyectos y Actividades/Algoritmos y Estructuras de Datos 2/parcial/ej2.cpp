@@ -7,23 +7,24 @@ class listaAdyacencia
 public:
     listaAdyacencia(list<list<int>> listOfLists)
     {
-        cout << "LISTA DE ADYACENCIA"<<endl;
+        cout << "LISTA DE ADYACENCIA" << endl;
         int i = 0;
         for (const list<int> &innerList : listOfLists)
         {
             i++;
             cout << i << "| -> ";
-            
+
             bool firstElement = true;
             for (int element : innerList)
             {
-                if (!firstElement) {
+                if (!firstElement)
+                {
                     cout << " -> ";
                 }
                 cout << element;
                 firstElement = false;
             }
-            
+
             cout << endl;
         }
     }
@@ -31,20 +32,22 @@ public:
 
 class matrizAdyacencia
 {
-private: 
+private:
     list<list<bool>> listOfLists;
+
 public:
     matrizAdyacencia(list<list<bool>> listOfLists_)
     {
         listOfLists = listOfLists_;
-        cout << "MATRIZ DE ADYACENCIA"<<endl;
+        cout << "MATRIZ DE ADYACENCIA" << endl;
         for (const list<bool> &innerList : listOfLists)
         {
             cout << "|";
             bool firstElement = true;
             for (bool element : innerList)
             {
-                if (!firstElement) {
+                if (!firstElement)
+                {
                     cout << "  ";
                 }
                 cout << element;
@@ -53,8 +56,9 @@ public:
             cout << "|" << endl;
         }
     }
-    void matrixToList(){
-        cout << "LISTA DE ADYACENCIA"<<endl;
+    void matrixToList()
+    {
+        cout << "LISTA DE ADYACENCIA" << endl;
         int i = 0;
         for (const list<bool> &innerList : listOfLists)
         {
@@ -65,33 +69,27 @@ public:
             for (bool element : innerList)
             {
                 a++;
-                
-                if(element == true){
-                    if (!firstElement) {
-                    cout << " -> ";
-                }
+
+                if (element == true)
+                {
+                    if (!firstElement)
+                    {
+                        cout << " -> ";
+                    }
                     cout << a;
                     firstElement = false;
                 }
-                
             }
             cout << endl;
         }
     }
 };
 
-
 int main()
 {
-    listaAdyacencia Lista1({{4, 2}, {1, 3}, {2, 4}, {3, 1}, {6}, {5}});
-    matrizAdyacencia Matriz1({
-                    {0, 1, 0, 1, 0, 0},
-                    {1, 0, 1, 0, 0, 0}, 
-                    {0, 1, 0, 1, 0, 0}, 
-                    {1, 0, 1, 0, 0, 0}, 
-                    {0, 0, 0, 0, 0, 1},
-                    {0, 0, 0, 0, 1, 0}
-                    });
+    matrizAdyacencia Matriz1({{0, 1, 1},
+                              {1, 0, 0},
+                              {1, 0, 0},
+                              });
     Matriz1.matrixToList();
-    
 }
