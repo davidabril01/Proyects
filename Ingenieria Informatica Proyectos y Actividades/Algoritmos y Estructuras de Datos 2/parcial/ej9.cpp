@@ -16,6 +16,6 @@ int main() {
         {0, 0, 0, 6, 0, 9},
         {14, 0, 2, 0, 9, 0}
         });
-        grafo.dijkstra(0, 4);
+        grafo.dijkstra(1, 5);
         return 0;
 }

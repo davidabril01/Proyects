@@ -14,7 +14,8 @@ int main() {
 
     Analise.findCycles();
     Analise.removeDuplicateCycles();
+    Analise.findCycleLength(3);
+    Analise.findCycleLength(4);
     Analise.printCycles();
-
     return 0;
 }

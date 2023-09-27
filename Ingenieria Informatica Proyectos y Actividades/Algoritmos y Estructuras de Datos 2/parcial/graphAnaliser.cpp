@@ -3,6 +3,7 @@
 #include <vector>
 #include <algorithm>
 #include <limits>
+#include <climits>
 using namespace std;
 
 graphAnaliser::graphAnaliser(const vector<vector<int>>& graph_) : graph(graph_) {
@@ -166,6 +167,8 @@ void graphAnaliser::printCycles() {
 }
 
 void graphAnaliser::primMST() {
+    /*V es el tamaño de la matriz, osea la cantidad de vertices
+    graph es la matriz de adyacencia*/
     int parent[V];
     int clave[V];
     bool MSTset[V];
@@ -300,7 +303,7 @@ void graphAnaliser::imprimirCaminoDijkstra(const vector<int>& padres, int vertic
 void graphAnaliser::dijkstra(int origen, int destino) {
     origen -=1;
     destino -=1;
-    int numVertices = graph.size();
+    int numVertices = V;
 
     vector<int> distancias(numVertices, INT_MAX);
     vector<bool> visitados(numVertices, false);
@@ -324,7 +327,7 @@ void graphAnaliser::dijkstra(int origen, int destino) {
         }
     }
 
-    cout << "Camino más corto desde el vértice " << origen << " al vértice " << destino << ":\n";
+    cout << "Camino más corto desde el vértice " << origen+1 << " al vértice " << destino+1 << ":\n";
     cout << "Distancia = " << distancias[destino] << " Camino = ";
     imprimirCaminoDijkstra(padres, destino);
     cout << endl;
