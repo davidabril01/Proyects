@@ -6,10 +6,15 @@ using namespace std;
 class Monticulo
 {
 private:
-    vector<int> *monti;
+    struct pais
+    {
+        string nombre;
+        int poblacion;
+        int PBI;
+    };
+    vector<pais> *monti;
     int cantNodos;
     int posLibre;
-
     // Métodos auxiliares
     // Métodos de cálculo para posición del nodo
     int Padre(int i);
@@ -28,12 +33,11 @@ public:
     ~Monticulo();
 
     // Funciones de montículo
-    void Insertar(int v);
-    void Borrar1(int i);
+    void Insertar(string Nombre, int Poblacion, int pBI);
     void Borrar();
     bool Vacio();
     void Mostrar();
-    int ExtraerMaximo();
+    void ExtraerMaximo();
 };
 
 // Constructor (Pasa tamaño inicial constructor)
@@ -41,7 +45,7 @@ Monticulo::Monticulo(int tamanioInicial)
 {
     cantNodos = tamanioInicial;
     posLibre = 0;
-    monti = new vector<int>(tamanioInicial);
+    monti = new vector<pais>(tamanioInicial);
 }
 
 // Destructor
@@ -74,9 +78,11 @@ bool Monticulo::Vacio()
 }
 
 // Inserta nodo en montículo
-void Monticulo::Insertar(int v)
+void Monticulo::Insertar(string Nombre, int Poblacion, int pBI)
 {
-    (*monti)[posLibre++] = v;
+    (*monti)[posLibre++].nombre = Nombre;
+    (*monti)[posLibre++].poblacion = Poblacion;
+    (*monti)[posLibre++].PBI = pBI;
     Subir(posLibre - 1);
 }
 
@@ -84,43 +90,34 @@ void Monticulo::Insertar(int v)
 void Monticulo::Subir(int i)
 {
     int nodoPadre;
-    while (i > 0 && (*monti)[i] > (*monti)[nodoPadre = Padre(i)])
+    while (i > 0 && (*monti)[i].PBI > (*monti)[nodoPadre = Padre(i)].PBI)
     {
         Intercambia(i, nodoPadre);
         i = nodoPadre;
     }
 }
 
-// Borra nodo de montículo
-void Monticulo::Borrar1(int i)
-{
-    if (i < posLibre)
-    {
-        (*monti)[i] = (*monti)[--posLibre];
-        Bajar(i);
-    }
-}
-
 // Realiza intercambio de nodos
 void Monticulo::Intercambia(int i1, int i2)
 {
-    int aux;
+    pais aux;
     aux = (*monti)[i1];
     (*monti)[i1] = (*monti)[i2];
     (*monti)[i2] = aux;
 }
 
+// Borra nodo de montículo
+
 void Monticulo::Borrar()
 {
     Bajar(0);
-    
 }
 
 void Monticulo::Bajar(int i)
 {
     if (Izquierdo(i) < (*monti).size() - 1)
     {
-        if ((*monti)[Izquierdo(i)] > (*monti)[Derecho(i)])
+        if ((*monti)[Izquierdo(i)].PBI > (*monti)[Derecho(i)].PBI)
         {
             Intercambia(i, Izquierdo(i));
             Bajar(Izquierdo(i));
@@ -136,31 +133,14 @@ void Monticulo::Bajar(int i)
         Intercambia(i, (*monti).size() - 1);
         Subir(i);
         (*monti).pop_back();
-    }else{
+    }
+    else
+    {
         (*monti).pop_back();
     }
 }
 
 // Realiza la bajada de un nodo a través del la estructura.
-void Monticulo::Bajar1(int i)
-{
-    int i1, i2, maximo;
-    maximo = i;
-    do
-    {
-        i = maximo;
-        i1 = Izquierdo(i);
-        i2 = Derecho(i);
-        if (i2 < posLibre && (*monti)[i1] > (*monti)[maximo])
-            maximo = i2;
-        if (i1 < posLibre && (*monti)[i1] > (*monti)[maximo])
-            maximo = i1;
-        if (i != maximo)
-        {
-            Intercambia(i, maximo);
-        }
-    } while (i != maximo && maximo < posLibre / 2);
-}
 
 // Recorrido del montículo (Visualiza todos los nodos)
 void Monticulo::Mostrar()
@@ -170,21 +150,21 @@ void Monticulo::Mostrar()
     else
     {
         for (int i = 0; i < posLibre; i++)
-            cout << "pos " << i << " - " << (*monti)[i] << ",";
+            cout << "pos " << i << " - Nombre : " << (*monti)[i].nombre << " - Poblacion : " << (*monti)[i].poblacion << " - PBI : " << (*monti)[i].PBI << ", ";
         cout << endl;
     }
 }
 
 // Toma el el valor máximo del montículo (Se encuentra en la raíz)
-int Monticulo::ExtraerMaximo()
+void Monticulo::ExtraerMaximo()
 {
-    int retval = (*monti)[0];
-    cout << "Monticulo: ";
-        for (int i = 0; i < (*monti).size(); i++)
-        {
-            cout << (*monti)[i] << "->";
-        }
-        cout << endl;
+    pais retval = (*monti)[0];
+    cout << "Monticulo ordenado por PBI: ";
+    for (int i = 0; i < (*monti).size(); i++)
+    {
+        cout << (*monti)[i].nombre << " -> ";
+    }
+    cout << endl;
     Borrar();
-    return retval;
+    cout << "Pais: " << retval.nombre << " || Poblacion: " << retval.poblacion << " || PBI: " << retval.PBI << endl;
 }

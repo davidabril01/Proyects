@@ -15,6 +15,7 @@ int main()
     M.Insertar(9);
     M.Insertar(7);
     M.Insertar(8);
+    M.Insertar(0);
     M.Mostrar();
 
     cout<<endl;
@@ -29,6 +30,6 @@ int main()
     cout << M.ExtraerMaximo()<<endl;
     cout << M.ExtraerMaximo()<<endl;
     cout << M.ExtraerMaximo()<<endl;
-
+    cout << M.ExtraerMaximo()<<endl;
     return 0;
 }
