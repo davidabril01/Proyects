@@ -1,7 +1,14 @@
+@font-face {
+    font-family: 'MiFuente';
+    src: url('fuentes/Skranji-Bold.ttf') format('truetype');
+}
+
 .principal{
+    font-family: 'MiFuente', sans-serif;
     text-align: center;
     background-color: #444654;
     height: 100vh;
+    overflow: hidden;
 }
 .principal__cabecera{
     background-color: #343541;
@@ -31,7 +38,19 @@
     text-align: center;
 }
 .principal__pie{
-    position: absolute;
-    bottom: 20px;
-    
+
+}
+
+.contenido__articulo1{
+    float: left;
+    margin-top: 50px;
+    border: #343541 solid;
+    border-radius: 30px;
+    overflow: hidden;
+    width: 900px;
+
+}
+
+.articulo1__imagen{
+    width: 100%;
 }
