@@ -80,9 +80,10 @@ bool Monticulo::Vacio()
 // Inserta nodo en montículo
 void Monticulo::Insertar(string Nombre, int Poblacion, int pBI)
 {
-    (*monti)[posLibre++].nombre = Nombre;
-    (*monti)[posLibre++].poblacion = Poblacion;
-    (*monti)[posLibre++].PBI = pBI;
+    (*monti)[posLibre].nombre = Nombre;
+    (*monti)[posLibre].poblacion = Poblacion;
+    (*monti)[posLibre].PBI = pBI;
+    posLibre+=1;
     Subir(posLibre - 1);
 }
 
