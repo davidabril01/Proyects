@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,12 +10,13 @@
     <link rel="stylesheet" href="assets/fonts/poppins/poppins.css">
     <link rel="stylesheet" href="assets/fonts/fontawesome-free-6.1.2-web/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/scroll.css">
     <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
-    
+
     <title>Portafolio - David Abril</title>
 </head>
+
 <body>
-    <!--Layout Principal-->
     <div class="layout">
         <!--Barra Lateral (informacion mia)-->
         <aside class="layout__aside">
@@ -101,12 +103,37 @@
         </aside>
         <!--Contenido Principal-->
         <main class="layout__content">
-            <section class="content__page">
-                <h1 class="page__name">David Abril</h1>
-                <h2 class="page__job">Desarrollador web</h2>
+            <section class="content__page content__contact">
+                <section class="contact__information">
+                    <div class="information__location">
+                        <h3>Granada, Andalucía</h3>
+                    </div>
+                    <div class="information__movil">
+                        <h3>+54 351 235 2542</h3>
+                    </div>
+                    <div class="information__email">
+                        <h3>davidabril@code411.net</h3>
+                    </div>
+                    <div class="information__me">
+                        <h3>Desarrollador Web</h3>
+                    </div>
+                </section>
+                <section class="contact__map">
+                    <img class="map__image" src="/assets/img/granadaMap.webp" alt="">
+                </section>
+                <section class="contact__message">
+                    <h2 class="message__title">Contactame</h2>
+                    <div class="message__input">
+                        <input class="message__name" placeholder="Nombre" type="text">
+                        <input class="message__email" placeholder="Email" type="text">
+                        <input class="message__subjet" placeholder="Asunto" type="text">
+                        <input class="message__message" placeholder="Mensaje" type="text">
+                    </div>
+                    <button class="message__button">Enviar mensaje</button>
+                </section>
             </section>
         </main>
     </div>
-
 </body>
+
 </html>
