@@ -597,3 +597,14 @@ body{
     box-sizing: border-box;
     padding-right: 3.5rem;
 }
+
+.formation__left::after{
+    content: "";
+    width: 11px;
+    height: 11px;
+    border: #04b4e0 solid 2px;
+    border-radius: 10px;
+    transform: translate(172px, -279px);
+    box-shadow: 0 0 0.8rem var(--color-secondary);
+    background-color: #ffffff;
+}
