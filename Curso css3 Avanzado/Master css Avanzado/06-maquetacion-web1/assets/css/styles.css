@@ -639,7 +639,6 @@ body {
     padding-right: 3.5rem;
 }
 
-<<<<<<< HEAD
 .formation__left::after{
     content: "";
     width: 11px;
@@ -650,7 +649,7 @@ body {
     box-shadow: 0 0 0.8rem var(--color-secondary);
     background-color: #ffffff;
 }
-=======
+
 .extras__title {
     margin: 2.5rem 0;
 }
@@ -680,13 +679,13 @@ body {
 .map__image {
     width: 600px;
     height: auto;
-    transform: translateY(-50px);
+    transform: translateY(-65px);
 }
 
 .content__contact{
     display: grid;
     grid-template-columns: 30% auto;
-    grid-template-rows: 200px auto;
+    grid-template-rows: 170px auto;
     grid-template-areas: "information map" "information message";
 }
 
@@ -703,5 +702,136 @@ body {
 
 .contact__message{
     grid-area: message;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
->>>>>>> 483db251b17c9fed3dbb54e48194053cf67d12b7
+
+.contact__information{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: start;
+    gap: 1.5rem;
+    margin-top: 5rem;
+}
+
+.information__info{
+    height:13rem;
+    width: 290px;
+    background-color: #FCFCFC;
+    border: solid var(--color-border-reviews) 1px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.info__title{
+    font-size: 1.5rem;
+}
+
+.info__icon{
+    color: var(--color-secondary);
+    font-size: 3.3rem;
+}
+
+.message__input{
+    display: grid;
+    grid-template-areas: "nombre message" "email message" "asunto message";
+    gap: 1rem;
+}
+
+.message__name{
+    width: 24.2rem;
+    height: 4rem;
+    grid-area: nombre;
+    padding-left: 1rem;
+    border-radius: 0.5rem;
+    border: solid var(--color-border-reviews) 2px;
+    color: var(--color-icons);
+}
+
+.message__email{
+    width: 24.2rem;
+    height: 4rem;
+    grid-area: email;
+    padding-left: 1rem;
+    border-radius: 0.5rem;
+    border: solid var(--color-border-reviews) 2px;
+    color: var(--color-icons);
+}
+
+.message__subjet{
+    width: 24.2rem;
+    height: 4rem;
+    grid-area: asunto;
+    padding-left: 1rem;
+    border-radius: 0.5rem;
+    border: solid var(--color-border-reviews) 2px;
+    color: var(--color-icons);
+}
+
+.message__message{
+    grid-area: message;
+    width: 25rem;
+    height: 19rem;
+    padding-left: 1rem;
+    padding-top: 0.7rem;
+    border-radius: 0.5rem;
+    border: solid var(--color-border-reviews) 2px;
+    color: var(--color-icons);
+}
+
+.message__button{
+    width: 18.5rem;
+    padding: 1.3rem 2rem;
+    border: 2px solid var(--color-secondary);
+    border-radius: 3.2rem;
+    box-shadow: 0 10px 10px -8px rgba(0, 0, 0, 0.22);
+    transition: all 200ms ease-in-out;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.message__button:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-principal);
+}
+
+/* ////////////////////////////////////////////////// portafolio */
+
+.portfolio__title {
+    font-size: 3.2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.portfolio__title::after {
+    content: "";
+    position: absolute;
+    top: 22px;
+    right: -15px;
+    width: 50px;
+    height: 30px;
+    background-image: -webkit-repeating-radial-gradient(center center, var(--color-secondary), var(--color-secondary) 1px, transparent 1px, transparent 100%);
+    background-size: 6px 6px;
+    z-index: -1;
+}
+
+.menu-portfolio__option{
+    margin-bottom: 2.5rem;
+}
+
+.portfolio__portfolio-content{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "col1 col2 col3";
+  gap: 1.5rem;
+}
+
+.item__image-container{
+    width: 26.5rem;
+}
