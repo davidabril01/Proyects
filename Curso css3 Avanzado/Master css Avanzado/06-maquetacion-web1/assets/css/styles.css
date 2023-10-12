@@ -64,6 +64,7 @@ body {
     /*Sombra detras del layout*/
     border-radius: 4rem;
     box-shadow: 0 0 100px -5px rgba(0, 0, 0, 0.25);
+    transition: all 0.5s;
 }
 
 /*Barra Lateral Azul*/
@@ -73,6 +74,7 @@ body {
     border-radius: 4rem 0 0 4rem;
     overflow: auto;
     overflow-x: hidden;
+    transition: all 0.5s;
 }
 
 .aside__user-info {
@@ -201,6 +203,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    transition: all 0.5s;
 }
 
 .page__name {
@@ -499,6 +502,7 @@ body {
 .abilities__title {
     display: inline-block;
     margin-bottom: 2rem;
+    width: 28rem;
 }
 
 .abilities__abilitie-bar-container {
@@ -614,6 +618,7 @@ body {
 .info__place {
     font-size: 1.3rem;
     color: var(--color-company);
+    width: 13rem;
 }
 
 .formation__left {
@@ -627,6 +632,7 @@ body {
 
 .formation__right {
     box-sizing: border-box;
+    width: 35rem;
     padding-left: 2.5rem;
     display: flex;
     flex-direction: column;
@@ -637,17 +643,6 @@ body {
 .formation__description {
     box-sizing: border-box;
     padding-right: 3.5rem;
-}
-
-.formation__left::after{
-    content: "";
-    width: 11px;
-    height: 11px;
-    border: #04b4e0 solid 2px;
-    border-radius: 10px;
-    transform: translate(172px, -279px);
-    box-shadow: 0 0 0.8rem var(--color-secondary);
-    background-color: #ffffff;
 }
 
 .extras__title {
@@ -682,25 +677,25 @@ body {
     transform: translateY(-65px);
 }
 
-.content__contact{
+.content__contact {
     display: grid;
     grid-template-columns: 30% auto;
     grid-template-rows: 170px auto;
     grid-template-areas: "information map" "information message";
 }
 
-.contact__information{
+.contact__information {
     grid-area: information;
 }
 
-.contact__map{
+.contact__map {
     grid-area: map;
     height: 100%;
     margin-top: 5rem;
     overflow: hidden;
 }
 
-.contact__message{
+.contact__message {
     grid-area: message;
     height: 70%;
     display: flex;
@@ -708,7 +703,7 @@ body {
     justify-content: space-around;
 }
 
-.contact__information{
+.contact__information {
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -717,8 +712,8 @@ body {
     margin-top: 5rem;
 }
 
-.information__info{
-    height:13rem;
+.information__info {
+    height: 13rem;
     width: 290px;
     background-color: #FCFCFC;
     border: solid var(--color-border-reviews) 1px;
@@ -729,22 +724,22 @@ body {
     gap: 1rem;
 }
 
-.info__title{
+.info__title {
     font-size: 1.5rem;
 }
 
-.info__icon{
+.info__icon {
     color: var(--color-secondary);
     font-size: 3.3rem;
 }
 
-.message__input{
+.message__input {
     display: grid;
     grid-template-areas: "nombre message" "email message" "asunto message";
     gap: 1rem;
 }
 
-.message__name{
+.message__name {
     width: 24.2rem;
     height: 4rem;
     grid-area: nombre;
@@ -754,7 +749,7 @@ body {
     color: var(--color-icons);
 }
 
-.message__email{
+.message__email {
     width: 24.2rem;
     height: 4rem;
     grid-area: email;
@@ -764,7 +759,7 @@ body {
     color: var(--color-icons);
 }
 
-.message__subjet{
+.message__subjet {
     width: 24.2rem;
     height: 4rem;
     grid-area: asunto;
@@ -774,7 +769,7 @@ body {
     color: var(--color-icons);
 }
 
-.message__message{
+.message__message {
     grid-area: message;
     width: 25rem;
     height: 19rem;
@@ -785,7 +780,7 @@ body {
     color: var(--color-icons);
 }
 
-.message__button{
+.message__button {
     width: 18.5rem;
     padding: 1.3rem 2rem;
     border: 2px solid var(--color-secondary);
@@ -821,17 +816,33 @@ body {
     z-index: -1;
 }
 
-.menu-portfolio__option{
+.menu-portfolio__option {
     margin-bottom: 2.5rem;
 }
 
-.portfolio__portfolio-content{
+.portfolio__portfolio-content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-  grid-template-areas: "col1 col2 col3";
-  gap: 1.5rem;
+    grid-template-areas: "col1 col2 col3";
+    gap: 1.5rem;
 }
 
-.item__image-container{
+.item__image-container {
     width: 26.5rem;
+}
+
+@media (max-width: 1850px) {
+    .layout {
+        grid-template-columns: 1fr;
+    }
+
+    .layout__aside {
+        display: none;
+    }
+
+    .layout__content {
+        grid-column: 1 / span 2;
+        width: 100%;
+        background-color: transparent;
+    }
 }
