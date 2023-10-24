@@ -11,9 +11,9 @@ int main(){
     Mont1.Insertar(10);
     Mont1.Insertar(12);
     Mont1.Insertar(11);
+    Mont1.Borrar();
+    Mont1.Borrar();
     Mont1.Mostrar();
-    cout << Mont1.ExtraerMaximo() << endl;
-    cout << Mont1.ExtraerMaximo() << endl;
     cout << Mont1.ExtraerMaximo() << endl;
     cout << Mont1.ExtraerMaximo() << endl;
     cout << Mont1.ExtraerMaximo() << endl;

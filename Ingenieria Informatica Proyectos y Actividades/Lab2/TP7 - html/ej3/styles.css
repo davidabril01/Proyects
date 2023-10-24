@@ -8,7 +8,6 @@
     text-align: center;
     background-color: #444654;
     height: 100vh;
-    overflow: hidden;
 }
 .principal__cabecera{
     background-color: #343541;
@@ -43,14 +42,35 @@
 
 .contenido__articulo1{
     float: left;
+    margin-left: 3rem;
     margin-top: 50px;
     border: #343541 solid;
     border-radius: 30px;
     overflow: hidden;
-    width: 900px;
+    width: 43vw;
 
 }
 
 .articulo1__imagen{
     width: 100%;
+}
+
+.contenido__articulo2{
+    float: right;
+    margin-right: 3rem;
+    width: 50vw;
+}
+
+.unidad__descripcion{
+    text-align: left;
+}
+
+.articulo2__bibliografia{
+    margin-left: 3rem;
+    width: 43vw;
+    float: left;
+}
+
+.principal__pie{
+    float:none;
 }
