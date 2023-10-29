@@ -2,8 +2,6 @@
 #include <string>
 #include <queue>
 #include <unordered_map>
-#include <sstream>
-#include <string.h>
 using namespace std;
 
 #define EMPTY_STRING ""
@@ -44,6 +42,7 @@ bool isLeaf(Node *root)
 {
     return root->left == nullptr && root->right == nullptr;
 }
+
 // Atraviesa el árbol de Huffman y almacena los códigos de Huffman en un mapa.
 void encode(Node *root, string str, unordered_map<char, string> &huffmanCode)
 {
@@ -63,10 +62,36 @@ void encode(Node *root, string str, unordered_map<char, string> &huffmanCode)
 }
 
 // Atraviesa el árbol de Huffman y decodifica la string codificada
+void decode(Node *root, int &index, string str)
+{
+    if (root == nullptr)
+    {
+        return;
+    }
+
+    // encontrado un nodo hoja
+    if (isLeaf(root))
+    {
+        cout << root->ch;
+        return;
+    }
+
+    index++;
+
+    if (str[index] == '0')
+    {
+        decode(root->left, index, str);
+    }
+    else
+    {
+        decode(root->right, index, str);
+    }
+}
 
 // Construye Huffman Tree y decodifica el texto de entrada dado
-string encodeHuffmanTree(string text, priority_queue<Node *, vector<Node *>, comp> &pq)
+string buildHuffmanTree(string text, priority_queue<Node *, vector<Node *>, comp> &pq)
 {
+    // caso base: string vacía
     if (text == EMPTY_STRING)
     {
         return "";
@@ -116,6 +141,16 @@ string encodeHuffmanTree(string text, priority_queue<Node *, vector<Node *>, com
     unordered_map<char, string> huffmanCode;
     encode(root, EMPTY_STRING, huffmanCode);
 
+    cout << "Huffman Codes are:\n"
+         << endl;
+    for (auto pair : huffmanCode)
+    {
+        cout << pair.first << " " << pair.second << endl;
+    }
+
+    cout << "\nThe original string is:\n"
+         << text << endl;
+
     // Imprimir string codificada
     string str;
     for (char ch : text)
@@ -123,7 +158,32 @@ string encodeHuffmanTree(string text, priority_queue<Node *, vector<Node *>, com
         str += huffmanCode[ch];
     }
 
+    cout << "\nThe encoded string is:\n";
     return str;
+}
+
+void decodificar(string str, priority_queue<Node *, vector<Node *>, comp> pq)
+{
+    Node *root = pq.top();
+    cout << "\nThe decoded string is:\n";
+    if (isLeaf(root))
+    {
+        // Caso especial: Para entradas como a, aa, aaa, etc.
+        while (root->freq--)
+        {
+            cout << root->ch;
+        }
+    }
+    else
+    {
+        // Atraviesa el árbol Huffman de nuevo y esta vez,
+        // decodifica la string codificada
+        int index = -1;
+        while (index < (int)str.size() - 1)
+        {
+            decode(root, index, str);
+        }
+    }
 }
 
 // Implementación del algoritmo de codificación de Huffman en C++
@@ -131,16 +191,9 @@ int main()
 {
     string text = "Huffman coding is a data compression algorithm.";
     priority_queue<Node *, vector<Node *>, comp> pq;
-    string code = encodeHuffmanTree(text, pq);
-    string cola = "";
-    while (!pq.empty())
-    {
-        cola += pq.top()->ch;
-        cola += to_string(pq.top()->freq);
-        cola += " ";
-        pq.pop();
-    }
-    cout<<code<<endl;
-    cout<<cola;
-    return 0;
+    string code = buildHuffmanTree(text, pq);
+    cout << code;
+    decodificar(code, pq);
+
+        return 0;
 }
