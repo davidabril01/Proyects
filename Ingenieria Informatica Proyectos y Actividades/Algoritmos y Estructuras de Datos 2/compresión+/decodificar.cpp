@@ -20,7 +20,10 @@ Node *getNode(char ch, int freq, Node *left, Node *right)
 {
     Node *node = new Node();
 
-    node->ch = ch;
+    if (ch != '#')
+    {
+        node->ch = ch;
+    }
     node->freq = freq;
     node->left = left;
     node->right = right;
@@ -43,25 +46,28 @@ bool isLeaf(Node *root)
 {
     return root->left == nullptr && root->right == nullptr;
 }
-void decode(Node* root, int &index, string str)
+void decode(Node *root, int &index, string str)
 {
-    if (root == nullptr) {
+    if (root == nullptr)
+    {
         return;
     }
- 
+
     // encontrado un nodo hoja
     if (isLeaf(root))
     {
         cout << root->ch;
         return;
     }
- 
+
     index++;
- 
-    if (str[index] == '0') {
+
+    if (str[index] == '0')
+    {
         decode(root->left, index, str);
     }
-    else {
+    else
+    {
         decode(root->right, index, str);
     }
 }
@@ -73,15 +79,18 @@ void decodeHuffmanTree(string str, priority_queue<Node *, vector<Node *>, comp> 
     if (isLeaf(root))
     {
         // Caso especial: Para entradas como a, aa, aaa, etc.
-        while (root->freq--) {
+        while (root->freq--)
+        {
             cout << root->ch;
         }
     }
-    else {
+    else
+    {
         // Atraviesa el árbol Huffman de nuevo y esta vez,
         // decodifica la string codificada
         int index = -1;
-        while (index < (int)str.size() - 1) {
+        while (index < (int)str.size() - 1)
+        {
             decode(root, index, str);
         }
     }
@@ -102,23 +111,12 @@ int main()
 
     priority_queue<Node *, vector<Node *>, comp> pq;
 
-    // Dividir la cadena 'cola_copy' en carácter y frecuencia
-    istringstream iss(cola_copy);
-    char ch;
-    int freq;
+    pq.push(getNode('#', stoi(cola), nullptr, nullptr));
 
-    while (iss >> ch >> freq)
-    {
-        // Crea un nuevo nodo y agrégalo a la nueva cola de prioridad
-        pq.push(getNode(ch, freq, nullptr, nullptr));
-    }
-    pq.push(getNode(' ', 6, nullptr, nullptr));
-    
     size_t pos = 0;
 
     cout << "\nThe decoded string is:\n";
     decodeHuffmanTree(input, pq);
-    
 
     return 0;
 }

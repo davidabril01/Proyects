@@ -193,7 +193,7 @@ int main()
     priority_queue<Node *, vector<Node *>, comp> pq;
     string code = buildHuffmanTree(text, pq);
     cout << code;
+    cout<<"char: "<<pq.top()->ch << "freq: " << pq.top()->freq;
     decodificar(code, pq);
-
         return 0;
 }
