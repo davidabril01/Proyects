@@ -1,4 +1,4 @@
-#include "C:\Users\gonza\Documents\AED 2\Busqueda\busqueda.h"
+#include "busqueda.h"
 
 
 int main() {
