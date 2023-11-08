@@ -1,0 +1,83 @@
+.principal {
+  height: 90%;
+  width: 70%;
+  margin: auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: #fff;
+  border-radius: 3rem;
+  box-shadow: 0 0 2rem #00000031;
+}
+
+
+.principal__text {
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 3rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.principal__buttons{
+  display: flex;
+  justify-content: center;
+  gap: 10rem;
+}
+
+.buttons__vender, .buttons__gestionar {
+  appearance: none;
+  border: none;
+  background: #aeeca8ba;
+  width: 15rem;
+  height: 10rem;
+  border-radius: 0.5rem;
+  color: #007111d5;
+  font-size: 2rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 0 2rem #00000031;
+  &:hover {
+    color: #007111;
+    background: #aeeca8;
+  }
+}
+
+
+.principal__barra {
+  margin: auto;
+  height: 250px;
+  padding-top: 3rem;
+  margin: 0;
+  padding: 0;
+  padding-top: 2rem;
+  z-index: 0;
+}
+
+.principal__vencimientos {
+  z-index: 1;
+}
+.vencimientos{
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  padding-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.vencimientos__text{
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 2rem;
+}
+
+.vencimientos__vencimiento{
+  padding: 0 3rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 1rem #00000031;
+}
+
+.vencimiento__fecha,
+.vencimiento__titulo,
+.vencimiento__monto{
+  color: rgba(0, 0, 0, 0.7);
+}

@@ -1,0 +1,108 @@
+.barraProgreso {
+
+    width: 100%;
+    height: 100%;
+}
+
+.progreso-circular {
+
+    &,
+    &:before,
+    &:after {
+        width: 24rem;
+        height: 24rem;
+        border-radius: 50%;
+    }
+
+    margin: auto;
+    position: relative;
+    display: flex;
+
+    &:before,
+    &:after {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    &:before {
+        border-radius: 50%;
+        padding: 3rem;
+        box-sizing: border-box;
+        font-size: 3.5rem;
+        font-weight: 600;
+        text-align: center;
+        line-height: 12rem;
+    }
+
+    &:after {
+        content: "";
+        text-align: center;
+        font-size: 2rem;
+        line-height: 25rem;
+    }
+}
+
+@function progress($percent) {
+    $deg: if($percent >=0, 90 + $percent * 0.9, 90 - $percent * -0.9);
+    @return #{$deg}deg;
+}
+
+@mixin progreso-circular($money, $bgcolor) {
+    
+    $percent: $money * 0.0006;
+    $progress: progress($percent);
+
+
+    @if $percent >0 {
+        background-image: linear-gradient(0deg,
+        #2d8f2fd4 50%,
+                rgba(#2d8f2fd4, 0.2) 50%);
+
+        &:after {
+            color: #2d8f2fd4;
+        }
+    }
+
+    @else {
+        background-image: linear-gradient(0deg,
+                rgba(#8f2d2dd4, 0.2) 50%,
+                #8f2d2dd4 50%);
+                &:after {
+                    color: #8f2d2dd4;
+                }
+    }
+
+    transform: rotate(#{$progress});
+
+    &:before {
+        content: "#{$money}$";
+        color: rgba(0, 0, 0, 0.7);
+        background: $bgcolor content-box;
+        transform: rotate(-#{$progress});
+    }
+
+    &:after {
+        content: "#{$percent}%";
+
+        background-image: linear-gradient(0deg,
+                $bgcolor 50%,
+                transparent 50%);
+        transform: scale(1.1) rotate(-#{$progress});
+    }
+}
+
+.progreso {
+    @include progreso-circular(
+        98500,
+        #fff)
+}
+
+.progreso-circular__barrita {
+    width: 29%;
+    height: 1px;
+    background-color: #00000090;
+    align-self: center;
+    position: absolute;
+    left: -30px;
+}
