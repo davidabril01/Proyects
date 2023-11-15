@@ -1,0 +1,31 @@
+.content__list-container {
+    border: 1px solid black;
+    height: 300px;
+    overflow-y: scroll;
+    width: 100%;
+}
+
+.list-container__product-list {
+    margin: 0;
+    padding: 0;
+}
+
+.product-list__product {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.product__name {
+    font-weight: bold;
+}
+
+.product__price {
+    color: green;
+}
+
+.selected {
+    background-color: #f5f5f5;
+    color: #333;
+    font-weight: bold;
+}

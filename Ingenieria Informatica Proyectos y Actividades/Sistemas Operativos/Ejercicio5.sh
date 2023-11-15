@@ -1,3 +1,4 @@
+
 #!/bin/bash
 
 # Comprobar si se proporcionan cinco palabras y el tipo de orden

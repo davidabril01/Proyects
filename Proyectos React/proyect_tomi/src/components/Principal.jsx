@@ -1,13 +1,23 @@
 import './Principal.scss';
 import BarraProgreso from './barraProgreso';
+import { useNavigate } from 'react-router-dom';
 
 function Principal() {
+  const navigate = useNavigate();
+
+  const ClickVentas = () => {
+    navigate('/Ventas');
+  };
+  const ClickGestion = () => {
+    navigate('/Gestion');
+  };
+
   return (
     <div className="principal">
       <span className="principal__text">Que necesitas?</span>
       <div className="principal__buttons">
-        <button className="buttons__vender">Vender</button>
-        <button className="buttons__gestionar">Gestionar</button>
+        <button className="buttons__vender" onClick={ClickVentas} >Vender</button>
+        <button className="buttons__gestionar" onClick={ClickGestion}>Gestionar</button>
       </div>
       <div className='principal__barra'>
         <BarraProgreso />

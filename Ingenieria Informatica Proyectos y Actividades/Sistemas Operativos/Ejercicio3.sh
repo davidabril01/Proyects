@@ -1,3 +1,4 @@
+
 #!/bin/bash
 
 # Comprobar si se proporciona una palabra como argumento
