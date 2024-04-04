@@ -1,14 +1,14 @@
 .principal {
   height: 90%;
-  width: 70%;
+  width: 1050px;
   margin: auto;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  background-color: #fff;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.834), #ffffff);
   border-radius: 3rem;
-  box-shadow: 0 0 2rem #00000031;
+  border: solid 2px #F3F4F6;
 }
 
 
@@ -21,27 +21,48 @@
 
 .principal__buttons{
   display: flex;
-  justify-content: center;
-  gap: 10rem;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem 3rem;
+  gap: 1.5rem;
 }
 
-.buttons__vender, .buttons__gestionar {
-  appearance: none;
-  border: none;
-  background: #aeeca8ba;
-  width: 15rem;
-  height: 10rem;
-  border-radius: 0.5rem;
-  color: #007111d5;
+.buttons__text{
+  color: rgb(107, 107, 107);
   font-size: 2rem;
-  font-weight: 700;
-  cursor: pointer;
-  box-shadow: 0 0 2rem #00000031;
-  &:hover {
-    color: #007111;
-    background: #aeeca8;
-  }
+  text-align: center;
+  line-height: 35px;
+  font-weight: 300;
 }
+
+.buttons__style{
+  background-color: #ffffffaf;
+  color: rgba(0, 0, 0, 0.7);
+  border: solid 2px #F3F4F6;
+  width: 15rem;
+  height: 7.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  line-height: 35px;
+  opacity: 50;
+  font-weight: 400;
+  padding-top: 0.7rem;
+}
+
+.buttons__style__icon{
+  font-size: 2.5rem;
+}
+.buttons__style:hover{
+  background-color: #F5F5F5;
+  color: #a4a4a4;
+}
+
+
 
 
 .principal__barra {
@@ -50,7 +71,6 @@
   padding-top: 3rem;
   margin: 0;
   padding: 0;
-  padding-top: 2rem;
   z-index: 0;
 }
 
@@ -60,24 +80,40 @@
 .vencimientos{
   display: flex;
   justify-content: center;
-  gap: 3rem;
-  padding-top: 2rem;
+  gap: 2rem;
   margin-bottom: 2rem;
 }
 
 .vencimientos__text{
-  color: rgba(0, 0, 0, 0.7);
+  color: rgb(107, 107, 107);
   font-size: 2rem;
+  text-align: center;
+  line-height: 20px;
+  font-weight: 300;
+  
 }
 
 .vencimientos__vencimiento{
   padding: 0 3rem;
   border-radius: 0.5rem;
-  box-shadow: 0 0 1rem #00000031;
+  background-color: #ffffffaf;
+  color: rgba(0, 0, 0, 0.7);
+  border: solid 2px #F3F4F6;
+  width: 15rem;
+  height: 7.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  box-shadow: 0 0 3rem #00000002;
+  margin-top: 1.5rem;
 }
 
 .vencimiento__fecha,
 .vencimiento__titulo,
 .vencimiento__monto{
-  color: rgba(0, 0, 0, 0.7);
+  color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  font-weight: 500;
 }

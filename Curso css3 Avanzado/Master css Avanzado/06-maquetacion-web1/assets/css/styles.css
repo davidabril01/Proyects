@@ -831,7 +831,7 @@ body {
     width: 26.5rem;
 }
 
-@media (max-width: 1850px) {
+@media (max-width: 1000px) {
     .layout {
         grid-template-columns: 1fr;
     }

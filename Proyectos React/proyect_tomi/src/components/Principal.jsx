@@ -1,6 +1,8 @@
 import './Principal.scss';
 import BarraProgreso from './barraProgreso';
 import { useNavigate } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars, faChartColumn, faDollarSign, faListCheck, faMinus } from "@fortawesome/free-solid-svg-icons";
 
 function Principal() {
   const navigate = useNavigate();
@@ -14,16 +16,23 @@ function Principal() {
 
   return (
     <div className="principal">
-      <span className="principal__text">Que necesitas?</span>
+      <span className="principal__text">Bienvenido David</span>
+      <span className="buttons__text">Que necesitas?</span>
       <div className="principal__buttons">
-        <button className="buttons__vender" onClick={ClickVentas} >Vender</button>
-        <button className="buttons__gestionar" onClick={ClickGestion}>Gestionar</button>
+        <button className="buttons__style cursor-pointer bg-white relative inline-flex items-center justify-center gap-2 rounded-md font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-[#F5F5F5] hover:text-[#65a76f] h-9 rounded-md px-3" onClick={ClickVentas} >Vender<FontAwesomeIcon className='buttons__style__icon' icon={faDollarSign} /></button>
+        <button
+          className="buttons__style cursor-pointer bg-white relative inline-flex items-center justify-center gap-2 rounded-md font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-[#F5F5F5] hover:text-[#65a76f] h-9 rounded-md px-3"
+        >Gestionar<FontAwesomeIcon className='buttons__style__icon' icon={faChartColumn} /></button>
+        <button
+          className="buttons__style cursor-pointer bg-white relative inline-flex items-center justify-center gap-2 rounded-md font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-[#F5F5F5] hover:text-[#65a76f] h-9 rounded-md px-3"
+        >Menu<FontAwesomeIcon className='buttons__style__icon'  icon={faBars} /></button>
       </div>
+      
       <div className='principal__barra'>
         <BarraProgreso />
       </div>
       <div className='principal__vencimientos'>
-        <span className='vencimientos__text'>Vencimientos</span>
+        <span className='vencimientos__text'>Tus vencimientos</span>
         <div className='vencimientos'>
           <div className='vencimientos__vencimiento'>
             <h3 className='vencimiento__fecha'>15 de Diciembre</h3>

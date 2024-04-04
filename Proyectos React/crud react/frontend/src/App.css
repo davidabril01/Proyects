@@ -1,0 +1,12 @@
+.App {
+  position: relative;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  justify-items: center !important;
+  gap: 3rem;
+  background-color: var(--color-secondary);
+  height: 12.5rem;
+  margin: 0 auto;
+  padding: 0;
+}
