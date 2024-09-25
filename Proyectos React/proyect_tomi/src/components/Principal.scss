@@ -1,119 +1,189 @@
 .principal {
-  height: 90%;
-  width: 1050px;
+  height: 84vh;
+  width: 100%;
+  max-width: 1050px;
   margin: auto;
-  overflow: hidden;
+  padding: 2rem 0;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0.834), #ffffff);
   border-radius: 3rem;
   border: solid 2px #F3F4F6;
-}
+
+  @media (max-height:450px),
+  (max-width: 1050px) {
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+    border: none;
+  }
+
+  .principal__text {
+    display: flex;
+    flex-direction: column;
+
+    .text__title {
+      color: var(--color-icons);
+      font-size: 3rem;
+    }
+
+    .text__buttons {
+      color: rgb(107, 107, 107);
+      font-size: 2rem;
+      text-align: center;
+      font-weight: 300;
+    }
+  }
+
+  .principal__buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0em 3rem;
+    gap: 1.5rem;
 
 
-.principal__text {
-  color: rgba(0, 0, 0, 0.7);
-  font-size: 3rem;
-  margin-top: 1.5rem;
-  margin-bottom: 1rem;
-}
+    .buttons__style {
+      background-color: #ffffffaf;
+      color: var(--color-icons);
+      border: solid 2px #F3F4F6;
+      width: 15rem;
+      height: 7.5rem;
+      font-size: 1rem;
+      cursor: pointer;
+      position: relative;
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      justify-content: center;
+      line-height: 2rem;
+      opacity: 50;
+      font-weight: 400;
+      padding-top: 0.7rem;
 
-.principal__buttons{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 1rem 3rem;
-  gap: 1.5rem;
-}
+      .buttons__style__icon {
+        font-size: 3rem;
+      }
 
-.buttons__text{
-  color: rgb(107, 107, 107);
-  font-size: 2rem;
-  text-align: center;
-  line-height: 35px;
-  font-weight: 300;
-}
+      @media (max-width:450px) {
+        width: 90%;
+        height: 5rem;
+        flex-direction: row-reverse;
+        padding-top: 0;
 
-.buttons__style{
-  background-color: #ffffffaf;
-  color: rgba(0, 0, 0, 0.7);
-  border: solid 2px #F3F4F6;
-  width: 15rem;
-  height: 7.5rem;
-  font-size: 1rem;
-  cursor: pointer;
-  position: relative;
-  display: flex;
-  flex-direction: column-reverse;
-  align-items: center;
-  justify-content: center;
-  line-height: 35px;
-  opacity: 50;
-  font-weight: 400;
-  padding-top: 0.7rem;
-}
+        .buttons__style__icon {
+          font-size: 2.5rem;
+          margin-right: 1.4rem;
+        }
+      }
 
-.buttons__style__icon{
-  font-size: 2.5rem;
-}
-.buttons__style:hover{
-  background-color: #F5F5F5;
-  color: #a4a4a4;
-}
+    }
+
+    .buttons__style:hover {
+      background-color: #F5F5F5;
+      color: #a4a4a4;
+    }
+
+    @media (max-width:450px) {
+      flex-direction: column;
+    }
+
+  }
+
+  .principal__barra {
+    margin: auto;
+    height: 14.5rem;
+    padding-top: 3rem;
+    margin: 0;
+    padding: 0;
+    z-index: 0;
+  }
+
+  .principal__vencimientos {
+    border: solid 2px #F3F4F6;
+    border-radius: 15px;
+    z-index: 1;
+    padding: 15px;
+    width: 80%;
+    align-self: center;
+  }
+
+  .vencimientos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 
 
 
+    .vencimientos__vencimiento {
+      background-color: #ffffffaf;
+      color: var(--color-icons);
+      width: 15rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+      box-shadow: 0 0 3rem #00000002;
+      margin-top: 1.5rem;
+      box-sizing: border-box;
+      overflow: hidden;
 
-.principal__barra {
-  margin: auto;
-  height: 250px;
-  padding-top: 3rem;
-  margin: 0;
-  padding: 0;
-  z-index: 0;
-}
+      .vencimiento__fecha,
+      .vencimiento__titulo,
+      .vencimiento__monto {
+        color: rgb(107, 107, 107);
+        font-weight: 400;
+        font-size: 1.16rem;
+        margin: 0;
+      }
+    }
 
-.principal__vencimientos {
-  z-index: 1;
-}
-.vencimientos{
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  margin-bottom: 2rem;
-}
+    @media (max-width: 630px) and (min-width: 450px) {
+      .vencimientos__vencimiento-v3 {
+        display: none;
+      }
+    }
 
-.vencimientos__text{
-  color: rgb(107, 107, 107);
-  font-size: 2rem;
-  text-align: center;
-  line-height: 20px;
-  font-weight: 300;
-  
-}
 
-.vencimientos__vencimiento{
-  padding: 0 3rem;
-  border-radius: 0.5rem;
-  background-color: #ffffffaf;
-  color: rgba(0, 0, 0, 0.7);
-  border: solid 2px #F3F4F6;
-  width: 15rem;
-  height: 7.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  box-shadow: 0 0 3rem #00000002;
-  margin-top: 1.5rem;
-}
+    @media (max-width:450px) {
+      flex-direction: column;
 
-.vencimiento__fecha,
-.vencimiento__titulo,
-.vencimiento__monto{
-  color: rgb(0, 0, 0);
-  display: flex;
-  justify-content: center;
-  font-weight: 500;
+      .vencimientos__vencimiento {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+
+        gap: 1rem;
+      }
+    }
+
+    @media (min-width: 630px) {
+      &:after {
+        content: "";
+        position: absolute;
+        width: 18rem;
+        height: 5rem;
+        border-left: #F5F5F5 solid 3px;
+        border-right: #F5F5F5 solid 3px;
+
+        @media (max-width:1050px) {
+          width: 25%;
+        }
+      }
+    }
+  }
+
+  .vencimientos__text {
+    display: block;
+    color: rgb(107, 107, 107);
+    text-align: left;
+    margin-left: 25px;
+    font-size: 1.3rem;
+
+    @media (max-width:450px) {
+      margin-left: 15px;
+    }
+  }
 }

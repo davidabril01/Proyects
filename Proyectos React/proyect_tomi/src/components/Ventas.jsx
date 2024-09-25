@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import Modal from './Modal';
 import './Ventas.scss';
+import SpanningTable from './spanningTable'
+import Button from '@mui/material/Button'
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import { useNavigate } from 'react-router-dom';
 
 function Ventas() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -9,12 +13,12 @@ function Ventas() {
   const calcularMontoTotal = () => {
     const precios = document.getElementsByClassName('fila__precio');
     let total = 0;
-  
+
     for (let i = 0; i < precios.length; i++) {
       const precio = parseFloat(precios[i].textContent.replace('$', ''));
       total += precio;
     }
-  
+
     setMontoTotal(total.toFixed(2));
   };
 
@@ -25,17 +29,27 @@ function Ventas() {
   const handleCloseModal = () => {
     setModalOpen(false);
   };
-  
+
   useEffect(() => {
     calcularMontoTotal();
   }, [modalOpen]);
 
+  const navigate = useNavigate();
+
+  const handleVolverClick = () => {
+    navigate('/');
+  };
+
+
   return (
-    
+
     <div className="contenedor_ventas">
-      <div>
+      <Button variant="contained" className='ventas__Boton-volver' onClick={handleVolverClick}>
+        <ArrowBackIcon />
+      </Button>
+      <h2 className="contenedor_ventas__title">Ventas</h2>
       <div className='contenedor_ventas__tabla'>
-        <table className='ventas__tabla'>
+        {/* <table className='table table-striped'>
           <thead className='tabla__filas_encabezado'>
             <tr className='filas_encabezado__encabezado'>
               <th className='encabezado__titulo'>Índice de Producto</th>
@@ -61,20 +75,22 @@ function Ventas() {
             </tr>
           </tbody>
         </table>
-        
-      </div>
-      <div className='contenedor_ventas__total'>
+         */}
+        <SpanningTable />
+
+        {/* <div className='contenedor_ventas__total'>
         <h2 className='total__title'>Total</h2>
         <h2 className='total__monto'>$ {montoTotal}</h2>
-      </div>
+      </div> */}
       </div>
       <div className='contenedor_ventas__contenedor_botones'>
-        <button className='contenedor_botones__agregar' onClick={handleOpenModal}>+</button>
+        <button className='buttons__style cursor-pointer bg-white relative inline-flex items-center justify-center gap-2 rounded-md font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-[#F5F5F5] hover:text-[#65a76f] h-9 rounded-md px-3' onClick={handleOpenModal}>Añadir</button>
         {modalOpen && <Modal onClose={handleCloseModal} />}
 
-        <button className='contenedor_botones__finlizar'>Finalizar</button>
+        <button className='buttons__style cursor-pointer bg-white relative inline-flex items-center justify-center gap-2 rounded-md font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-[#F5F5F5] hover:text-[#65a76f] h-9 rounded-md px-3'>
+          Finalizar
+        </button>
       </div>
-      
     </div>
   );
 }

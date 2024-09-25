@@ -1,0 +1,51 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  gap: 2rem;
+  background-color: antiquewhite;
+  color: rgb(76, 72, 67);
+}
+
+.App__title{
+  text-shadow: 1.5px 1.5px rgb(0, 0, 0);
+}
+
+.App__contenedorIngreso{
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.contenedorIngreso__input{
+  border: none;
+  color: rgb(76, 72, 67);
+  font-size: 1.1rem;
+  padding: 3px;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+}
+
+.contenedorIngreso__contenedorCB{
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.contenedorCB__comboBox{
+  color: antiquewhite;
+  background-color: rgb(76, 72, 67);
+  border-radius: 5px;
+}
+
+.contenedorIngreso__submit{
+  color: antiquewhite;
+  background-color: rgb(76, 72, 67);
+  border-radius: 5px;
+}
+
+.App__resultado{
+  font-size: 1.7rem;
+}

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 import Principal from './components/Principal';
-import Menu from './components/Menu';
 import Gestion from './components/Gestion';
 import Ventas from './components/Ventas';
 
@@ -12,7 +11,6 @@ class App extends Component {
       <div className='App'>
         <Router>
           <header className='App-header'>
-            <Menu />
           </header>
           <main className="App-main">
             <Routes>

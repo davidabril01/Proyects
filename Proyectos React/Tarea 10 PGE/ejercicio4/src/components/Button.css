@@ -1,0 +1,15 @@
+.Boton{
+    margin: 5px;
+    background-color: rgb(52, 74, 104);
+    border: solid 1px;
+    border-radius: 5px;
+    border-color: rgb(91, 128, 179);
+    color: aliceblue;
+    cursor: pointer;
+    font-size: 1.05rem;
+    
+}
+
+.Boton:hover{
+    background-color: rgb(91, 128, 179);
+}

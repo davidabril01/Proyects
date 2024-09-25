@@ -100,17 +100,17 @@
 
 .progreso {
     @include progreso-circular(
-        -105000,
+        0,
         #fff)
 }
 
 .progreso-circular__barrita {
-    width: 13.4%;
-    height: 40px;
+    width: 3.2rem;
+    height: 3.2rem;
     border-radius: 50%;
     background-color: #ae7575;
     align-self: center;
     position: absolute;
     left: 0px;
-    top: 45%;
+    top: 10.2rem;
 }

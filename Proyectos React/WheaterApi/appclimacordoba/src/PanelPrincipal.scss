@@ -1,0 +1,50 @@
+.PanelPrincipal {
+    max-width: 396px;
+    padding: 1.5rem;
+    margin: 2rem auto; 
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.PanelPrincipal:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+    transform: translateY(-2px); 
+}
+
+/* Estilos para el tema claro */
+.PanelPrincipal.light {
+    background-color: #f9f9f9;
+    color: #000;
+    border-color: #ddd;
+}
+
+/* Estilos para el tema oscuro */
+.PanelPrincipal.dark {
+    background-color: #333;
+    color: #fff;
+    border-color: #555;
+}
+
+.Fecha{
+    margin: 0;
+}
+
+.Temp{
+    font-size: 4rem;
+}
+
+.ClimaActual {
+    width: 100%;
+    align-items: center;
+    align-content: center;
+    column-count: 2; 
+    margin-bottom: 1rem;
+}
+
+

@@ -1,0 +1,40 @@
+.ThemeButton {
+    all: unset;
+    position: absolute;
+    z-index: 10;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    top: 0.5rem;
+    left: 0.5rem;
+    text-align: center;
+    font-size: 1rem;
+    cursor: pointer; 
+  
+ 
+    background-color: #fff;
+    color: #000;
+    border: solid 2px #bebebe;
+    box-shadow: 5px 5px 10px #ffffff34;
+  
+    &:hover {
+      background-color: #ddd;
+      color: #333;
+      box-shadow: 5px 5px 10px #dddddd34;
+    }
+
+  }
+  
+
+  .ThemeButton.light {
+    background-color: #333;
+    color: #fff; 
+    box-shadow: 0 0 10px #00000034;
+    border: solid 2px #696868;
+    &:hover {
+      background-color: #555;
+      color: #eee;
+      box-shadow: 0 0 10px #33333334;
+    }
+  }
+  
