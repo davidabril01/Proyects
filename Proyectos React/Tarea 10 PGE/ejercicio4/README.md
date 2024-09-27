@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+# Proyecto de Ventas David
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este proyecto es una aplicación de ventas simple desarrollada con React. Permite agregar productos, ver detalles de los productos y visualizar gráficas de ganancias mensuales. La navegación entre las distintas páginas de productos se realiza mediante `react-router-dom`.
 
-## Available Scripts
+## Requisitos
 
-In the project directory, you can run:
+Antes de ejecutar el proyecto, asegúrate de tener instalado:
 
-### `npm start`
+- Node.js (versión 14 o superior)
+- npm (versión 6 o superior)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Instalación de dependencias
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Para instalar las dependencias del proyecto, ejecuta:
 
-### `npm test`
+```bash
+npm install
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+En caso de que las dependencias no se instalen correctamente con el comando anterior, puedes instalar las bibliotecas necesarias manualmente:
 
-### `npm run build`
+### Librerías necesarias
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **React**:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  ```bash
+   npm install react react-dom
+  ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **React Router DOM**: 
 
-### `npm run eject`
+  ```bash
+   npm install react-router-dom
+  ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **React Scripts**: 
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+  ```bash
+   npm install react-scripts
+  ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Uso
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Una vez instaladas las dependencias, puedes iniciar el servidor de desarrollo ejecutando:
 
-## Learn More
+```bash
+npm start
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Esto abrirá la aplicación en tu navegador en la dirección `http://localhost:3000`.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Estructura del proyecto
 
-### Code Splitting
+- **`index.js`**: Punto de entrada de la aplicación. Renderiza el componente principal `App`.
+- **`App.js`**: Componente raíz que gestiona las rutas principales usando `react-router-dom`.
+- Componentes:
+  - `PagePrincipal.js`: Página principal que muestra el título y los botones de productos.
+  - `ModalArtefact.js`: Modal para agregar nuevos productos.
+  - `ButtonsContainer.js`: Contenedor que gestiona los botones de productos, permitiendo agregar y eliminar.
+  - `Button.js`: Componente que representa cada botón de producto.
+  - `ProductPage.js`: Página dinámica que muestra las ganancias mensuales de cada producto.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Importante
 
-### Analyzing the Bundle Size
+Recuerda que el proyecto no incluye la carpeta `node_modules` ni el archivo `package-lock.json` en el archivo `.zip`. Al descargar el archivo y descomprimirlo, asegúrate de instalar las dependencias antes de ejecutar la aplicación.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Notas adicionales
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Este proyecto utiliza `localStorage` y `sessionStorage` para almacenar los datos de los productos y las ganancias mensuales respectivamente.
+- Para modificar los estilos, puedes editar los archivos CSS correspondientes en la carpeta `components`.
